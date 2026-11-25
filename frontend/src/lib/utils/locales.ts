@@ -109,6 +109,10 @@ export const LOCALE_MAP = {
 		name: 'slovenian',
 		flag: '🇸🇮'
 	},
+	mk: {
+		name: 'macedonian',
+		flag: '🇲🇰'
+	},
 	nb: {
 		name: 'norwegian',
 		flag: '🇳🇴'
@@ -143,6 +147,7 @@ export const language: any = {
 	estonian: m.estonian(),
 	slovak: m.slovak(),
 	slovenian: m.slovenian(),
+	macedonian: m.macedonian(),
 	norwegian: m.norwegian()
 };
 
@@ -174,6 +179,7 @@ export const defaultLangLabels = {
 	et: 'Eesti',
 	sk: 'Slovenčina',
 	sl: 'Slovenščina',
+	mk: 'Македонски',
 	nb: 'Norsk bokmål'
 };
 

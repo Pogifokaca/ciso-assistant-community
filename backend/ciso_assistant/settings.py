@@ -746,6 +746,7 @@ LANGUAGES = [
     ("et", "Estonian"),
     ("sk", "Slovak"),
     ("sl", "Slovenian"),
+    ("mk", "Macedonian"),
     ("nb", "Norwegian Bokmål"),
 ]
 

@@ -233,6 +233,7 @@ export const LOCALE_DISPLAY_MAP = {
 	et: '🇪🇪 Eesti',
 	sk: '🇸🇰 Slovenčina',
 	sl: '🇸🇮 Slovenščina',
+	mk: '🇲🇰 Македонски',
 	nb: '🇳🇴 Norsk bokmål',
 	hu: '🇭🇺 Magyar'
 };
