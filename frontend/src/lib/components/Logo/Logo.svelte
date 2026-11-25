@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ciso from '#lib/assets/ciso.svg';
+	import ciso from '#lib/assets/regtech.svg';
 
 	interface Props {
 		height?: number;
@@ -9,4 +9,4 @@
 	let { height = 200, width = 200 }: Props = $props();
 </script>
 
-<img class="c" {height} {width} src={ciso} alt="Ciso-assistant icon" data-testid="logo-image" />
+<img class="c" {height} {width} src={ciso} alt="RegTech logo" data-testid="logo-image" />

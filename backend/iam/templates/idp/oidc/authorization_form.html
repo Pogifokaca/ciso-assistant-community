@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% translate "Authorize access" %} - CISO Assistant</title>
+  <title>{% translate "Authorize access" %} - RegTech</title>
   <style>
     body { font-family: system-ui, sans-serif; background: #f4f4f7; color: #1f2937; margin: 0; }
     .card { max-width: 480px; margin: 8vh auto; background: #fff; border-radius: 12px;
@@ -29,7 +29,7 @@
 </head>
 <body>
   <main class="card">
-    <h1>{% blocktranslate with name=client.name %}{{ name }} wants to access CISO Assistant{% endblocktranslate %}</h1>
+    <h1>{% blocktranslate with name=client.name %}{{ name }} wants to access RegTech{% endblocktranslate %}</h1>
     <p class="who">{% blocktranslate with email=request.user.email %}Signed in as {{ email }}{% endblocktranslate %}</p>
     {% if self_registered %}
       <div class="warning">

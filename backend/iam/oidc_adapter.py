@@ -46,7 +46,7 @@ def is_mcp_resource(uri: str) -> bool:
 class CISOOIDCAdapter(DefaultOIDCAdapter):
     scope_display = {
         **DefaultOIDCAdapter.scope_display,
-        "mcp": _("Use CISO Assistant through MCP"),
+        "mcp": _("Use RegTech through MCP"),
     }
 
     def get_issuer(self) -> str:

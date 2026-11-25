@@ -89,7 +89,7 @@ class MFAAdapter(DefaultMFAAdapter):
         rp_id = urlparse(settings.CISO_ASSISTANT_URL).hostname
         return {
             "id": rp_id,
-            "name": "CISO Assistant",
+            "name": "RegTech",
         }
 
 

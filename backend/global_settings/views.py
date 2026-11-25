@@ -742,7 +742,7 @@ def _notify_administrators_of_mailer_change(
     )
     try:
         mail_service.send(
-            "CISO Assistant: outgoing mail configuration changed",
+            "RegTech: outgoing mail configuration changed",
             body,
             recipients,
             from_email=previous_sender,
