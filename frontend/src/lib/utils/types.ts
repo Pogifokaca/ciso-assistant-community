@@ -125,6 +125,12 @@ export const URL_MODEL = [
 	'data-breaches',
 	'dpia-requirement-changes',
 	'purposes',
+	// finreg (RegTech financial institutions)
+	'regulators',
+	'financial-institutions',
+	'regulatory-obligations',
+	'regulatory-reports',
+	'supervisory-findings',
 	'personal-data',
 	'data-subjects',
 	'data-recipients',

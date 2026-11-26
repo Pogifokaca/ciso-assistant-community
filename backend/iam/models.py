@@ -63,6 +63,7 @@ ALLOWED_PERMISSION_APPS = (
     "tprm",
     "privacy",
     "resilience",
+    "finreg",
     "crq",
     "pmbok",
     "iam",

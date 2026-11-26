@@ -1259,6 +1259,101 @@ export const dataBreachSchema = z.object({
 	observation: z.string().optional()
 });
 
+// RegTech: financial institutions module
+const optionalDate = z.union([z.literal('').transform(() => null), z.iso.date()]).nullish();
+const optionalUrl = z.string().url().optional().or(z.literal(''));
+const optionalEmail = z.string().email().optional().or(z.literal(''));
+
+export const regulatorSchema = z.object({
+	...NameDescriptionMixin,
+	folder: z.string(),
+	ref_id: z.string().optional(),
+	abbreviation: z.string().max(32).optional(),
+	sector: z.string().optional().default('banking'),
+	legal_basis: z.string().max(500).optional(),
+	website: optionalUrl,
+	contact_email: optionalEmail,
+	contact_phone: z.string().max(64).optional(),
+	filtering_labels: z.array(z.string()).optional()
+});
+
+export const financialInstitutionSchema = z.object({
+	...NameDescriptionMixin,
+	folder: z.string(),
+	ref_id: z.string().optional(),
+	institution_type: z.string().optional().default('bank'),
+	status: z.string().optional().default('active'),
+	regulators: z.array(z.string().optional()).optional(),
+	license_number: z.string().max(100).optional(),
+	license_date: optionalDate,
+	registration_number: z.string().max(32).optional(),
+	tax_number: z.string().max(32).optional(),
+	lei: z.string().max(20).optional(),
+	is_systemic: z.boolean().optional().default(false),
+	address: z.string().max(500).optional(),
+	website: optionalUrl,
+	contact_email: optionalEmail,
+	contact_phone: z.string().max(64).optional(),
+	owner: z.array(z.string().optional()).optional(),
+	filtering_labels: z.array(z.string()).optional()
+});
+
+export const regulatoryObligationSchema = z.object({
+	...NameDescriptionMixin,
+	folder: z.string(),
+	ref_id: z.string().optional(),
+	regulator: z.string().optional().nullable(),
+	legal_reference: z.string().max(500).optional(),
+	obligation_type: z.string().optional().default('other'),
+	frequency: z.string().optional().default('continuous'),
+	status: z.string().optional().default('not_assessed'),
+	effective_date: optionalDate,
+	due_date: optionalDate,
+	institutions: z.array(z.string().optional()).optional(),
+	frameworks: z.array(z.string().optional()).optional(),
+	applied_controls: z.array(z.string().optional()).optional(),
+	evidences: z.array(z.string().optional()).optional(),
+	owner: z.array(z.string().optional()).optional(),
+	filtering_labels: z.array(z.string()).optional()
+});
+
+export const regulatoryReportSchema = z.object({
+	...NameDescriptionMixin,
+	folder: z.string(),
+	ref_id: z.string().optional(),
+	institution: z.string().optional().nullable(),
+	regulator: z.string().optional().nullable(),
+	obligation: z.string().optional().nullable(),
+	report_type: z.string().optional().default('periodic'),
+	reporting_period: z.string().max(64).optional(),
+	status: z.string().optional().default('planned'),
+	due_date: optionalDate,
+	submitted_on: optionalDate,
+	submission_reference: z.string().max(200).optional(),
+	evidences: z.array(z.string().optional()).optional(),
+	owner: z.array(z.string().optional()).optional(),
+	filtering_labels: z.array(z.string()).optional()
+});
+
+export const supervisoryFindingSchema = z.object({
+	...NameDescriptionMixin,
+	folder: z.string(),
+	ref_id: z.string().optional(),
+	institution: z.string().optional().nullable(),
+	regulator: z.string().optional().nullable(),
+	obligation: z.string().optional().nullable(),
+	inspection: z.string().max(300).optional(),
+	inspection_date: optionalDate,
+	severity: z.string().optional().default('medium'),
+	status: z.string().optional().default('open'),
+	due_date: optionalDate,
+	remediation_plan: z.string().optional(),
+	applied_controls: z.array(z.string().optional()).optional(),
+	evidences: z.array(z.string().optional()).optional(),
+	owner: z.array(z.string().optional()).optional(),
+	filtering_labels: z.array(z.string()).optional()
+});
+
 export const purposeSchema = z.object({
 	...NameDescriptionMixin,
 	name: z.string().max(200).optional(),
@@ -2379,6 +2474,11 @@ const SCHEMA_MAP: Record<string, ZodSchema> = {
 	'right-requests': rightRequestSchema,
 	'data-breaches': dataBreachSchema,
 	purposes: purposeSchema,
+	regulators: regulatorSchema,
+	'financial-institutions': financialInstitutionSchema,
+	'regulatory-obligations': regulatoryObligationSchema,
+	'regulatory-reports': regulatoryReportSchema,
+	'supervisory-findings': supervisoryFindingSchema,
 	'personal-data': personalDataSchema,
 	'data-subjects': dataSubjectSchema,
 	'data-recipients': dataRecipientSchema,

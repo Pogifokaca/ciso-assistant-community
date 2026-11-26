@@ -227,6 +227,7 @@ urlpatterns = [
     path("", include("doc_management.urls")),
     path("privacy/", include("privacy.urls")),
     path("resilience/", include("resilience.urls")),
+    path("finreg/", include("finreg.urls")),
     path("automation/", include("automation.urls")),
     path("crq/", include("crq.urls")),
     path("pmbok/", include("pmbok.urls")),

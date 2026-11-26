@@ -83,6 +83,42 @@ export const navData = {
 			]
 		},
 		{
+			name: 'financialInstitutionsCategory',
+			items: [
+				{
+					name: 'finregOverview',
+					fa_icon: 'fa-solid fa-gauge',
+					href: '/finreg-overview',
+					permissions: ['view_financialinstitution']
+				},
+				{
+					name: 'financialInstitutionsRegister',
+					fa_icon: 'fa-solid fa-building-columns',
+					href: '/financial-institutions'
+				},
+				{
+					name: 'regulators',
+					fa_icon: 'fa-solid fa-landmark',
+					href: '/regulators'
+				},
+				{
+					name: 'regulatoryObligations',
+					fa_icon: 'fa-solid fa-scale-balanced',
+					href: '/regulatory-obligations'
+				},
+				{
+					name: 'regulatoryReports',
+					fa_icon: 'fa-solid fa-file-export',
+					href: '/regulatory-reports'
+				},
+				{
+					name: 'supervisoryFindings',
+					fa_icon: 'fa-solid fa-magnifying-glass-chart',
+					href: '/supervisory-findings'
+				}
+			]
+		},
+		{
 			name: 'organization',
 			items: [
 				{

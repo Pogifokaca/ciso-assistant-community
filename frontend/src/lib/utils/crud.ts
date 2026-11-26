@@ -2527,6 +2527,123 @@ export const URL_MODEL_MAP: ModelMap = {
 		],
 		selectFields: [{ field: 'source' }]
 	},
+	regulators: {
+		endpointUrl: 'finreg/regulators',
+		name: 'regulator',
+		localName: 'regulator',
+		localNamePlural: 'regulators',
+		verboseName: 'Regulator',
+		verboseNamePlural: 'Regulators',
+		foreignKeyFields: [{ field: 'folder', urlModel: 'folders', urlParams: 'content_type=DO&content_type=GL' }, { field: 'filtering_labels', urlModel: 'filtering-labels' }],
+		selectFields: [{ field: 'sector' }],
+		reverseForeignKeyFields: [
+			{ field: 'regulators', urlModel: 'financial-institutions', disableDelete: true },
+			{ field: 'regulator', urlModel: 'regulatory-obligations' },
+			{ field: 'regulator', urlModel: 'regulatory-reports' },
+			{ field: 'regulator', urlModel: 'supervisory-findings' }
+		]
+	},
+	'financial-institutions': {
+		endpointUrl: 'finreg/financial-institutions',
+		name: 'financialinstitution',
+		localName: 'financialInstitution',
+		localNamePlural: 'financialInstitutions',
+		verboseName: 'Financial institution',
+		verboseNamePlural: 'Financial institutions',
+		foreignKeyFields: [
+			{ field: 'folder', urlModel: 'folders', urlParams: 'content_type=DO&content_type=GL' },
+			{ field: 'regulators', urlModel: 'regulators', endpointUrl: 'finreg/regulators' },
+			{ field: 'owner', urlModel: 'actors' },
+			{ field: 'filtering_labels', urlModel: 'filtering-labels' }
+		],
+		selectFields: [{ field: 'institution_type' }, { field: 'status' }],
+		reverseForeignKeyFields: [
+			{ field: 'institutions', urlModel: 'regulatory-obligations', disableDelete: true },
+			{ field: 'institution', urlModel: 'regulatory-reports' },
+			{ field: 'institution', urlModel: 'supervisory-findings' }
+		]
+	},
+	'regulatory-obligations': {
+		endpointUrl: 'finreg/regulatory-obligations',
+		name: 'regulatoryobligation',
+		localName: 'regulatoryObligation',
+		localNamePlural: 'regulatoryObligations',
+		verboseName: 'Regulatory obligation',
+		verboseNamePlural: 'Regulatory obligations',
+		foreignKeyFields: [
+			{ field: 'folder', urlModel: 'folders', urlParams: 'content_type=DO&content_type=GL' },
+			{ field: 'regulator', urlModel: 'regulators', endpointUrl: 'finreg/regulators' },
+			{
+				field: 'institutions',
+				urlModel: 'financial-institutions',
+				endpointUrl: 'finreg/financial-institutions'
+			},
+			{ field: 'frameworks', urlModel: 'frameworks' },
+			{ field: 'applied_controls', urlModel: 'applied-controls' },
+			{ field: 'evidences', urlModel: 'evidences' },
+			{ field: 'owner', urlModel: 'actors' },
+			{ field: 'filtering_labels', urlModel: 'filtering-labels' }
+		],
+		selectFields: [{ field: 'obligation_type' }, { field: 'frequency' }, { field: 'status' }],
+		reverseForeignKeyFields: [
+			{ field: 'obligation', urlModel: 'regulatory-reports' },
+			{ field: 'obligation', urlModel: 'supervisory-findings' }
+		]
+	},
+	'regulatory-reports': {
+		endpointUrl: 'finreg/regulatory-reports',
+		name: 'regulatoryreport',
+		localName: 'regulatoryReport',
+		localNamePlural: 'regulatoryReports',
+		verboseName: 'Regulatory report',
+		verboseNamePlural: 'Regulatory reports',
+		foreignKeyFields: [
+			{ field: 'folder', urlModel: 'folders', urlParams: 'content_type=DO&content_type=GL' },
+			{
+				field: 'institution',
+				urlModel: 'financial-institutions',
+				endpointUrl: 'finreg/financial-institutions'
+			},
+			{ field: 'regulator', urlModel: 'regulators', endpointUrl: 'finreg/regulators' },
+			{
+				field: 'obligation',
+				urlModel: 'regulatory-obligations',
+				endpointUrl: 'finreg/regulatory-obligations'
+			},
+			{ field: 'evidences', urlModel: 'evidences' },
+			{ field: 'owner', urlModel: 'actors' },
+			{ field: 'filtering_labels', urlModel: 'filtering-labels' }
+		],
+		selectFields: [{ field: 'report_type' }, { field: 'status' }]
+	},
+	'supervisory-findings': {
+		endpointUrl: 'finreg/supervisory-findings',
+		name: 'supervisoryfinding',
+		localName: 'supervisoryFinding',
+		localNamePlural: 'supervisoryFindings',
+		verboseName: 'Supervisory finding',
+		verboseNamePlural: 'Supervisory findings',
+		markdownFields: ['remediation_plan'],
+		foreignKeyFields: [
+			{ field: 'folder', urlModel: 'folders', urlParams: 'content_type=DO&content_type=GL' },
+			{
+				field: 'institution',
+				urlModel: 'financial-institutions',
+				endpointUrl: 'finreg/financial-institutions'
+			},
+			{ field: 'regulator', urlModel: 'regulators', endpointUrl: 'finreg/regulators' },
+			{
+				field: 'obligation',
+				urlModel: 'regulatory-obligations',
+				endpointUrl: 'finreg/regulatory-obligations'
+			},
+			{ field: 'applied_controls', urlModel: 'applied-controls' },
+			{ field: 'evidences', urlModel: 'evidences' },
+			{ field: 'owner', urlModel: 'actors' },
+			{ field: 'filtering_labels', urlModel: 'filtering-labels' }
+		],
+		selectFields: [{ field: 'severity' }, { field: 'status' }]
+	},
 	purposes: {
 		endpointUrl: 'privacy/purposes',
 		name: 'purpose',

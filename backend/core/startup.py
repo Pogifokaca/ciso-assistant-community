@@ -2055,6 +2055,27 @@ ADMINISTRATOR_PERMISSIONS_LIST = [
     "delete_importmapping",
 ]
 
+
+# RegTech: financial institutions module (finreg)
+FINREG_MODELS = [
+    "regulator",
+    "financialinstitution",
+    "regulatoryobligation",
+    "regulatoryreport",
+    "supervisoryfinding",
+]
+FINREG_VIEW_PERMISSIONS = [f"view_{m}" for m in FINREG_MODELS]
+FINREG_ALL_PERMISSIONS = [
+    f"{action}_{m}"
+    for m in FINREG_MODELS
+    for action in ("add", "view", "change", "delete")
+]
+READER_PERMISSIONS_LIST += FINREG_VIEW_PERMISSIONS
+APPROVER_PERMISSIONS_LIST += FINREG_VIEW_PERMISSIONS
+ANALYST_PERMISSIONS_LIST += FINREG_ALL_PERMISSIONS
+DOMAIN_MANAGER_PERMISSIONS_LIST += FINREG_ALL_PERMISSIONS
+ADMINISTRATOR_PERMISSIONS_LIST += FINREG_ALL_PERMISSIONS
+
 THIRD_PARTY_RESPONDENT_PERMISSIONS_LIST = [
     "view_complianceassessment",
     "view_requirementassessment",

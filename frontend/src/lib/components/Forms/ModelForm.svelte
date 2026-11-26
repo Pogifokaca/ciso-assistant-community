@@ -30,6 +30,11 @@
 	import EntityAssessmentForm from './ModelForm/EntityAssessmentForm.svelte';
 	import SolutionsForm from './ModelForm/SolutionForm.svelte';
 	import ContractsForm from './ModelForm/ContractForm.svelte';
+	import RegulatorForm from './ModelForm/RegulatorForm.svelte';
+	import FinancialInstitutionForm from './ModelForm/FinancialInstitutionForm.svelte';
+	import RegulatoryObligationForm from './ModelForm/RegulatoryObligationForm.svelte';
+	import RegulatoryReportForm from './ModelForm/RegulatoryReportForm.svelte';
+	import SupervisoryFindingForm from './ModelForm/SupervisoryFindingForm.svelte';
 	import RepresentativesForm from './ModelForm/RepresentativeForm.svelte';
 	import EntityScoreForm from './ModelForm/EntityScoreForm.svelte';
 	import TierForm from './ModelForm/TierForm.svelte';
@@ -769,6 +774,16 @@
 				{context}
 				{...rest}
 			/>
+		{:else if URLModel === 'regulators'}
+			<RegulatorForm {form} {model} {cacheLocks} {formDataCache} {initialData} {...rest} />
+		{:else if URLModel === 'financial-institutions'}
+			<FinancialInstitutionForm {form} {model} {cacheLocks} {formDataCache} {initialData} {...rest} />
+		{:else if URLModel === 'regulatory-obligations'}
+			<RegulatoryObligationForm {form} {model} {cacheLocks} {formDataCache} {initialData} {...rest} />
+		{:else if URLModel === 'regulatory-reports'}
+			<RegulatoryReportForm {form} {model} {cacheLocks} {formDataCache} {initialData} {...rest} />
+		{:else if URLModel === 'supervisory-findings'}
+			<SupervisoryFindingForm {form} {model} {cacheLocks} {formDataCache} {initialData} {...rest} />
 		{:else if URLModel === 'purposes'}
 			<PurposeForm {form} {model} {cacheLocks} {formDataCache} {context} {initialData} {...rest} />
 		{:else if URLModel === 'personal-data'}

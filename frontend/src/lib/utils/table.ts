@@ -1834,6 +1834,145 @@ export const CWE_FILTER: ListViewFilterConfig = {
 	}
 };
 
+// RegTech: financial institutions module
+export const FINREG_SECTOR_FILTER: ListViewFilterConfig = {
+	component: AutocompleteSelect,
+	props: {
+		label: 'sector',
+		optionsEndpoint: 'regulators/sector',
+		optionsLabelField: 'label',
+		optionsValueField: 'value',
+		browserCache: 'force-cache',
+		multiple: true
+	}
+};
+
+export const FINREG_INSTITUTION_TYPE_FILTER: ListViewFilterConfig = {
+	component: AutocompleteSelect,
+	props: {
+		label: 'institutionType',
+		optionsEndpoint: 'financial-institutions/institution_type',
+		optionsLabelField: 'label',
+		optionsValueField: 'value',
+		browserCache: 'force-cache',
+		multiple: true
+	}
+};
+
+export const FINREG_INSTITUTION_STATUS_FILTER: ListViewFilterConfig = {
+	component: AutocompleteSelect,
+	props: {
+		label: 'status',
+		optionsEndpoint: 'financial-institutions/status',
+		optionsLabelField: 'label',
+		optionsValueField: 'value',
+		browserCache: 'force-cache',
+		multiple: true
+	}
+};
+
+export const FINREG_OBLIGATION_TYPE_FILTER: ListViewFilterConfig = {
+	component: AutocompleteSelect,
+	props: {
+		label: 'obligationType',
+		optionsEndpoint: 'regulatory-obligations/obligation_type',
+		optionsLabelField: 'label',
+		optionsValueField: 'value',
+		browserCache: 'force-cache',
+		multiple: true
+	}
+};
+
+export const FINREG_FREQUENCY_FILTER: ListViewFilterConfig = {
+	component: AutocompleteSelect,
+	props: {
+		label: 'frequency',
+		optionsEndpoint: 'regulatory-obligations/frequency',
+		optionsLabelField: 'label',
+		optionsValueField: 'value',
+		browserCache: 'force-cache',
+		multiple: true
+	}
+};
+
+export const FINREG_OBLIGATION_STATUS_FILTER: ListViewFilterConfig = {
+	component: AutocompleteSelect,
+	props: {
+		label: 'status',
+		optionsEndpoint: 'regulatory-obligations/status',
+		optionsLabelField: 'label',
+		optionsValueField: 'value',
+		browserCache: 'force-cache',
+		multiple: true
+	}
+};
+
+export const FINREG_REPORT_TYPE_FILTER: ListViewFilterConfig = {
+	component: AutocompleteSelect,
+	props: {
+		label: 'reportType',
+		optionsEndpoint: 'regulatory-reports/report_type',
+		optionsLabelField: 'label',
+		optionsValueField: 'value',
+		browserCache: 'force-cache',
+		multiple: true
+	}
+};
+
+export const FINREG_REPORT_STATUS_FILTER: ListViewFilterConfig = {
+	component: AutocompleteSelect,
+	props: {
+		label: 'status',
+		optionsEndpoint: 'regulatory-reports/status',
+		optionsLabelField: 'label',
+		optionsValueField: 'value',
+		browserCache: 'force-cache',
+		multiple: true
+	}
+};
+
+export const FINREG_SEVERITY_FILTER: ListViewFilterConfig = {
+	component: AutocompleteSelect,
+	props: {
+		label: 'severity',
+		optionsEndpoint: 'supervisory-findings/severity',
+		optionsLabelField: 'label',
+		optionsValueField: 'value',
+		browserCache: 'force-cache',
+		multiple: true
+	}
+};
+
+export const FINREG_FINDING_STATUS_FILTER: ListViewFilterConfig = {
+	component: AutocompleteSelect,
+	props: {
+		label: 'status',
+		optionsEndpoint: 'supervisory-findings/status',
+		optionsLabelField: 'label',
+		optionsValueField: 'value',
+		browserCache: 'force-cache',
+		multiple: true
+	}
+};
+
+export const FINREG_REGULATOR_FILTER: ListViewFilterConfig = {
+	component: AutocompleteSelect,
+	props: {
+		label: 'regulator',
+		optionsEndpoint: 'regulators',
+		multiple: true
+	}
+};
+
+export const FINREG_INSTITUTION_FILTER: ListViewFilterConfig = {
+	component: AutocompleteSelect,
+	props: {
+		label: 'financialInstitution',
+		optionsEndpoint: 'financial-institutions',
+		multiple: true
+	}
+};
+
 export const listViewFields = {
 	folders: {
 		head: ['ref_id', 'name', 'description', 'contentType', 'parentDomain', 'iamGroups', 'labels'],
@@ -3133,6 +3272,149 @@ export const listViewFields = {
 			},
 			discovered_on: dateFilter('discovered_on', { isDateTime: true }),
 			authority_notified_on: dateFilter('authority_notified_on', { isDateTime: true })
+		}
+	},
+	regulators: {
+		head: ['refId', 'abbreviation', 'name', 'sector', 'website', 'domain'],
+		body: ['ref_id', 'abbreviation', 'name', 'sector', 'website', 'folder'],
+		filters: {
+			folder: DOMAIN_FILTER,
+			sector: FINREG_SECTOR_FILTER,
+			filtering_labels: LABELS_FILTER
+		}
+	},
+	'financial-institutions': {
+		head: [
+			'refId',
+			'name',
+			'institutionType',
+			'status',
+			'regulators',
+			'licenseNumber',
+			'isSystemic',
+			'domain'
+		],
+		body: [
+			'ref_id',
+			'name',
+			'institution_type',
+			'status',
+			'regulators',
+			'license_number',
+			'is_systemic',
+			'folder'
+		],
+		filters: {
+			folder: DOMAIN_FILTER,
+			institution_type: FINREG_INSTITUTION_TYPE_FILTER,
+			status: FINREG_INSTITUTION_STATUS_FILTER,
+			regulators: FINREG_REGULATOR_FILTER,
+			owner: OWNER_FILTER,
+			filtering_labels: LABELS_FILTER
+		}
+	},
+	'regulatory-obligations': {
+		head: [
+			'refId',
+			'name',
+			'regulator',
+			'legalReference',
+			'obligationType',
+			'frequency',
+			'status',
+			'dueDate',
+			'owner'
+		],
+		body: [
+			'ref_id',
+			'name',
+			'regulator',
+			'legal_reference',
+			'obligation_type',
+			'frequency',
+			'status',
+			'due_date',
+			'owner'
+		],
+		filters: {
+			folder: DOMAIN_FILTER,
+			regulator: FINREG_REGULATOR_FILTER,
+			institutions: FINREG_INSTITUTION_FILTER,
+			obligation_type: FINREG_OBLIGATION_TYPE_FILTER,
+			frequency: FINREG_FREQUENCY_FILTER,
+			status: FINREG_OBLIGATION_STATUS_FILTER,
+			owner: OWNER_FILTER,
+			due_date: dateFilter('due_date')
+		}
+	},
+	'regulatory-reports': {
+		head: [
+			'refId',
+			'name',
+			'financialInstitution',
+			'regulator',
+			'reportType',
+			'reportingPeriod',
+			'status',
+			'dueDate',
+			'submittedOn',
+			'owner'
+		],
+		body: [
+			'ref_id',
+			'name',
+			'institution',
+			'regulator',
+			'report_type',
+			'reporting_period',
+			'status',
+			'due_date',
+			'submitted_on',
+			'owner'
+		],
+		filters: {
+			folder: DOMAIN_FILTER,
+			institution: FINREG_INSTITUTION_FILTER,
+			regulator: FINREG_REGULATOR_FILTER,
+			report_type: FINREG_REPORT_TYPE_FILTER,
+			status: FINREG_REPORT_STATUS_FILTER,
+			owner: OWNER_FILTER,
+			due_date: dateFilter('due_date'),
+			submitted_on: dateFilter('submitted_on')
+		}
+	},
+	'supervisory-findings': {
+		head: [
+			'refId',
+			'name',
+			'financialInstitution',
+			'regulator',
+			'inspection',
+			'severity',
+			'status',
+			'dueDate',
+			'owner'
+		],
+		body: [
+			'ref_id',
+			'name',
+			'institution',
+			'regulator',
+			'inspection',
+			'severity',
+			'status',
+			'due_date',
+			'owner'
+		],
+		filters: {
+			folder: DOMAIN_FILTER,
+			institution: FINREG_INSTITUTION_FILTER,
+			regulator: FINREG_REGULATOR_FILTER,
+			severity: FINREG_SEVERITY_FILTER,
+			status: FINREG_FINDING_STATUS_FILTER,
+			owner: OWNER_FILTER,
+			due_date: dateFilter('due_date'),
+			inspection_date: dateFilter('inspection_date')
 		}
 	},
 	purposes: {

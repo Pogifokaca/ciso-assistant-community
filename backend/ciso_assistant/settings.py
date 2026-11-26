@@ -506,6 +506,7 @@ INSTALLED_APPS = [
     "tprm",
     "privacy",
     "resilience",
+    "finreg",
     "automation",
     "crq",
     "custom_fields",
