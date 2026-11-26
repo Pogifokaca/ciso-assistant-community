@@ -1,412 +1,277 @@
-convert_library_version: 'v2 ; Compat Mode: [0] {[v2.1] (DEFAULT) D''ont use any Compatibility
-  Mode}'
+convert_library_version: 'v2 ; Compat Mode: [0] {[v2.1] (DEFAULT) D''ont use any Compatibility Mode}'
 urn: urn:intuitem:risk:library:intuitem-common-catalog
 locale: en
 ref_id: intuitem-common-catalog
 name: INTUITEM Common Catalog
 description: INTUITEM Common Catalog - Threats
-copyright: "\xA9 intuitem - 2025"
-version: 4
+copyright: © intuitem - 2025
+version: 5
 publication_date: 2026-11-20
 provider: intuitem
 packager: intuitem
 translations:
-  fr:
-    name: Catalogue commun INTUITEM
-    description: Catalogue commun INTUITEM - Menaces
-  de:
-    name: INTUITEM-Basiskatalog
-    description: |-
-      INTUITEM-Basiskatalog – Bedrohungen
-
-      Hinweis zur Übersetzung: KI-gestützte maschinelle Übersetzung mit anschließender sprachlicher und fachlicher Prüfung durch den KI-Assistenten. Keine offizielle Übersetzung der Herausgeber; keine unabhängige menschliche Prüfung. Die deutschen Ergänzungen umfassen die Bibliotheksmetadaten und Bedrohungstexte.
+  mk:
+    name: Заеднички каталог на INTUITEM
+    description: Заеднички каталог на INTUITEM - Закани
 objects:
   threats:
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-001
     ref_id: ICT-001
     name: Ransomware
-    description: Malicious software encrypts data, demanding ransom for decryption
-      keys
+    description: Malicious software encrypts data, demanding ransom for decryption keys
     translations:
-      fr:
-        name: "Ran\xE7ongiciel"
-        description: "Logiciel malveillant qui chiffre les donn\xE9es et exige une\
-          \ ran\xE7on pour les cl\xE9s de d\xE9chiffrement"
-      de:
-        name: Ransomware
-        description: Schadsoftware verschlüsselt Daten und fordert Lösegeld für die Entschlüsselungsschlüssel.
+      mk:
+        name: Ransomware (уцена со шифрирање)
+        description: Злонамерен софтвер ги шифрира податоците и бара откуп за клучевите за дешифрирање
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-002
     ref_id: ICT-002
     name: Phishing and Spear Phishing
-    description: Deceptive emails or messages trick users into revealing sensitive
-      information or gaining access
+    description: Deceptive emails or messages trick users into revealing sensitive information or gaining
+      access
     translations:
-      fr:
-        name: "Hame\xE7onnage et Harponnage"
-        description: "Courriels ou messages trompeurs incitant les utilisateurs \xE0\
-          \ r\xE9v\xE9ler des informations sensibles ou \xE0 donner acc\xE8s"
-      de:
-        name: Phishing und Spear-Phishing
-        description: Täuschende E-Mails oder Nachrichten verleiten Nutzer dazu, sensible Informationen preiszugeben
-          oder Zugriff zu gewähren.
+      mk:
+        name: Фишинг и таргетиран фишинг (spear phishing)
+        description: Измамнички пораки или е-пошта ги наведуваат корисниците да откријат чувствителни
+          информации или да овозможат пристап
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-003
     ref_id: ICT-003
     name: Third-Party / Supply Chain Attacks
     description: Compromising third-party vendors to gain access to the main target
     translations:
-      fr:
-        name: "Attaques via Tiers / Cha\xEEne d'Approvisionnement"
-        description: "Compromission de fournisseurs tiers pour acc\xE9der \xE0 la\
-          \ cible principale."
-      de:
-        name: Angriffe über Dritte oder die Lieferkette
-        description: Kompromittierung von Drittanbietern, um Zugang zum eigentlichen Angriffsziel zu erlangen.
+      mk:
+        name: Напади преку трети страни / синџирот на снабдување
+        description: Компромитирање на добавувачи од трети страни за да се добие пристап до главната цел
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-004
     ref_id: ICT-004
     name: Zero-Day Exploits
     description: Exploiting unknown vulnerabilities before patches are available
     translations:
-      fr:
-        name: Exploits Zero-Day
-        description: "Exploitation de vuln\xE9rabilit\xE9s inconnues avant que des\
-          \ correctifs ne soient disponibles."
-      de:
-        name: Zero-Day-Exploits
-        description: Ausnutzung unbekannter Schwachstellen, bevor Patches verfügbar sind.
+      mk:
+        name: Експлоатации на zero-day ранливости
+        description: Искористување на непознати ранливости пред да бидат достапни закрпи
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-005
     ref_id: ICT-005
     name: Insider Threats
     description: Malicious or negligent actions by employees or contractors
     translations:
-      fr:
-        name: Menaces Internes
-        description: "Actions malveillantes ou n\xE9gligentes par des employ\xE9s\
-          \ ou des sous-traitants."
-      de:
-        name: Bedrohungen durch Insider
-        description: Böswillige oder fahrlässige Handlungen von Beschäftigten oder Auftragnehmern.
+      mk:
+        name: Внатрешни закани
+        description: Злонамерни или небрежни дејства на вработени или изведувачи
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-006
     ref_id: ICT-006
     name: Advanced Persistent Threats (APTs)
     description: Long-term, targeted cyber-espionage attacks by state-sponsored groups
     translations:
-      fr:
-        name: "Menaces Persistantes Avanc\xE9es (APTs)"
-        description: "Attaques de cyber-espionnage cibl\xE9es et prolong\xE9es par\
-          \ des groupes soutenus par des \xC9tats."
-      de:
-        name: Advanced Persistent Threats (APTs)
-        description: Langfristige, gezielte Cyberspionageangriffe durch staatlich unterstützte Gruppen.
+      mk:
+        name: Напредни постојани закани (APT)
+        description: Долгорочни, таргетирани напади за сајбер шпионажа од групи поддржани од држави
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-007
     ref_id: ICT-007
     name: DoS / DDoS
     description: Overwhelming systems to make services unavailable
     translations:
-      fr:
+      mk:
         name: DoS / DDoS
-        description: "Surcharge de syst\xE8mes pour rendre les services indisponibles."
-      de:
-        name: DoS / DDoS
-        description: Überlastung von Systemen, um Dienste unerreichbar zu machen.
+        description: Преоптоварување на системите за услугите да станат недостапни
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-008
     ref_id: ICT-008
     name: Social Engineering
-    description: Manipulating individuals into divulging confidential information
-      or gaining access
+    description: Manipulating individuals into divulging confidential information or gaining access
     translations:
-      fr:
-        name: "Ing\xE9nierie Sociale"
-        description: "Manipulation d'individus pour qu'ils divulguent des informations\
-          \ confidentielles ou accordent un acc\xE8s."
-      de:
-        name: Social Engineering
-        description: Manipulation von Personen, um vertrauliche Informationen oder Zugriff zu erlangen.
+      mk:
+        name: Социјален инженеринг
+        description: Манипулирање со поединци да откријат доверливи информации или да овозможат пристап
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-009
     ref_id: ICT-009
     name: Malware and Spyware
     description: Malicious software designed to damage or spy on systems
     translations:
-      fr:
-        name: Logiciels Malveillants et Espions
-        description: "Logiciels malveillants con\xE7us pour endommager ou espionner\
-          \ des syst\xE8mes."
-      de:
-        name: Malware und Spyware
-        description: Schadsoftware, die Systeme beschädigen oder ausspionieren soll.
+      mk:
+        name: Злонамерен софтвер и шпионски софтвер
+        description: Злонамерен софтвер дизајниран да оштети или да шпионира системи
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-010
     ref_id: ICT-010
     name: Cryptojacking
     description: Unauthorized use of computing resources to mine cryptocurrency
     translations:
-      fr:
+      mk:
         name: Cryptojacking
-        description: "Utilisation non autoris\xE9e de ressources informatiques pour\
-          \ miner des cryptomonnaies."
-      de:
-        name: Cryptojacking
-        description: Unbefugte Nutzung von Rechenressourcen zum Schürfen von Kryptowährungen.
+        description: Неовластено користење на компјутерски ресурси за ископување криптовалути
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-011
     ref_id: ICT-011
     name: Domain Name System (DNS) Spoofing and Hijacking
     description: Gaining control over DNS to redirect users to malicious websites
     translations:
-      fr:
-        name: "Usurpation et D\xE9tournement de DNS"
-        description: "Prise de contr\xF4le du DNS pour rediriger les utilisateurs\
-          \ vers des sites malveillants."
-      de:
-        name: DNS-Spoofing und DNS-Hijacking
-        description: Übernahme der Kontrolle über das DNS, um Nutzer auf schädliche Websites umzuleiten.
+      mk:
+        name: Лажирање и преземање на DNS (Domain Name System)
+        description: Преземање контрола врз DNS за пренасочување на корисниците кон злонамерни веб-страници
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-012
     ref_id: ICT-012
     name: Password Attacks (Brute Force and Credential Stuffing)
     description: Repeated attempts to guess passwords or use stolen credentials
     translations:
-      fr:
-        name: Attaques par Mot de Passe (Force Brute et Bourrage)
-        description: "Tentatives r\xE9p\xE9t\xE9es de deviner des mots de passe ou\
-          \ d'utiliser des identifiants vol\xE9s."
-      de:
-        name: Passwortangriffe (Brute Force und Credential Stuffing)
-        description: Wiederholte Versuche, Passwörter zu erraten oder gestohlene Zugangsdaten zu verwenden.
+      mk:
+        name: Напади на лозинки (brute force и credential stuffing)
+        description: Повторени обиди за погодување лозинки или користење украдени акредитиви
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-013
     ref_id: ICT-013
     name: Deepfake and Synthetic Identity Fraud
     description: Using AI-generated content for impersonation
     translations:
-      fr:
-        name: "Deepfake et Fraude d'Identit\xE9 Synth\xE9tique"
-        description: "Utilisation de contenu g\xE9n\xE9r\xE9 par IA pour l'usurpation\
-          \ d'identit\xE9."
-      de:
-        name: Betrug mit Deepfakes und synthetischen Identitäten
-        description: Nutzung KI-generierter Inhalte, um sich als jemand anderes auszugeben.
+      mk:
+        name: Deepfake и измама со синтетички идентитет
+        description: Користење содржини генерирани со вештачка интелигенција за лажно претставување
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-014
     ref_id: ICT-014
     name: Artificial Intelligence (AI) Threats and Model Manipulation
-    description: Model biases, adversarial attacks, model poisoning, data manipulation,
-      and LLM escapes, leading to unauthorized actions, misinformation, and compromised
-      decision-making
+    description: Model biases, adversarial attacks, model poisoning, data manipulation, and LLM escapes,
+      leading to unauthorized actions, misinformation, and compromised decision-making
     translations:
-      fr:
-        name: "Menaces li\xE9es \xE0 l'IA et Manipulation de Mod\xE8les"
-        description: "Biais de mod\xE8les, les attaques adverses, l'empoisonnement\
-          \ de mod\xE8les, la manipulation de donn\xE9es et les fuites de LLM, conduisant\
-          \ \xE0 des actions non autoris\xE9es, de la d\xE9sinformation et des d\xE9\
-          cisions compromises."
-      de:
-        name: KI-Bedrohungen und Modellmanipulation
-        description: Modellverzerrungen, gezielte Angriffe mit manipulierten Eingaben, Modellvergiftung, Datenmanipulation
-          und das Umgehen von LLM-Schutzmechanismen führen zu unbefugten Handlungen, Fehlinformationen und beeinträchtigter
-          Entscheidungsfindung.
+      mk:
+        name: Закани поврзани со вештачка интелигенција (АИ) и манипулација на модели
+        description: Пристрасност на моделите, непријателски напади, труење на моделите, манипулација
+          со податоци и заобиколување на LLM ограничувањата, што води до неовластени дејства, дезинформации
+          и компромитирано одлучување
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-015
     ref_id: ICT-015
     name: Cloud Security Threats
-    description: Misconfigurations, insecure APIs, and account hijacking in cloud
-      environments leading to data exposure and unauthorized access
+    description: Misconfigurations, insecure APIs, and account hijacking in cloud environments leading
+      to data exposure and unauthorized access
     translations:
-      fr:
-        name: "Menaces de S\xE9curit\xE9 Cloud"
-        description: "Erreurs de configuration, APIs non s\xE9curis\xE9es et d\xE9\
-          tournement de comptes dans les environnements cloud entra\xEEnant l'exposition\
-          \ de donn\xE9es et des acc\xE8s non autoris\xE9s."
-      de:
-        name: Bedrohungen der Cloud-Sicherheit
-        description: Fehlkonfigurationen, unsichere APIs und Kontoübernahmen in Cloud-Umgebungen führen zur
-          Offenlegung von Daten und zu unbefugtem Zugriff.
+      mk:
+        name: Безбедносни закани во облак
+        description: Погрешни конфигурации, небезбедни API-ја и преземање сметки во облачни околини, што
+          води до изложување на податоци и неовластен пристап
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-016
     ref_id: ICT-016
     name: Internet of Things (IoT) Vulnerabilities
-    description: Insecure smart devices and sensors, leading to network compromise
-      and unauthorized access to sensitive data
+    description: Insecure smart devices and sensors, leading to network compromise and unauthorized access
+      to sensitive data
     translations:
-      fr:
-        name: "Vuln\xE9rabilit\xE9s de l'Internet des Objets (IoT)"
-        description: "Appareils intelligents et capteurs non s\xE9curis\xE9s, entra\xEE\
-          nant la compromission du r\xE9seau et l'acc\xE8s non autoris\xE9 \xE0 des\
-          \ donn\xE9es sensibles."
-      de:
-        name: Schwachstellen im Internet der Dinge (IoT)
-        description: Unsichere vernetzte Geräte und Sensoren führen zur Kompromittierung von Netzwerken und
-          zu unbefugtem Zugriff auf sensible Daten.
+      mk:
+        name: Ранливости на Интернет на нештата (IoT)
+        description: Небезбедни паметни уреди и сензори, што води до компромитирање на мрежата и неовластен
+          пристап до чувствителни податоци
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-017
     ref_id: ICT-017
     name: Mobile Device Threats
-    description: Security risks related to mobile devices, including malicious apps,
-      device theft, and unauthorized access to sensitive data
+    description: Security risks related to mobile devices, including malicious apps, device theft, and
+      unauthorized access to sensitive data
     translations:
-      fr:
-        name: "Menaces li\xE9es aux Appareils Mobiles"
-        description: "Risques de s\xE9curit\xE9 li\xE9s aux appareils mobiles, y compris\
-          \ les applications malveillantes, le vol d'appareils et l'acc\xE8s non autoris\xE9\
-          \ aux donn\xE9es sensibles."
-      de:
-        name: Bedrohungen für Mobilgeräte
-        description: Sicherheitsrisiken bei Mobilgeräten, darunter schädliche Apps, Gerätediebstahl und unbefugter
-          Zugriff auf sensible Daten.
+      mk:
+        name: Закани за мобилните уреди
+        description: Безбедносни ризици поврзани со мобилните уреди, вклучително злонамерни апликации,
+          кражба на уреди и неовластен пристап до чувствителни податоци
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-018
     ref_id: ICT-018
     name: API Security Threats
-    description: Exploiting poorly secured APIs for unauthorized access, data breaches,
-      and business logic manipulation
+    description: Exploiting poorly secured APIs for unauthorized access, data breaches, and business logic
+      manipulation
     translations:
-      fr:
-        name: "Menaces de S\xE9curit\xE9 API"
-        description: "Exploitation d'APIs mal s\xE9curis\xE9es pour un acc\xE8s non\
-          \ autoris\xE9, des fuites de donn\xE9es et la manipulation de la logique\
-          \ m\xE9tier."
-      de:
-        name: Bedrohungen der API-Sicherheit
-        description: Ausnutzung unzureichend abgesicherter APIs für unbefugten Zugriff, Datenkompromittierungen
-          und die Manipulation von Geschäftslogik.
+      mk:
+        name: Безбедносни закани за API
+        description: Искористување на слабо заштитени API-ја за неовластен пристап, повреди на податоци
+          и манипулација со деловната логика
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-019
     ref_id: ICT-019
     name: Data Breach, Leak and Shadow IT
-    description: Unauthorized data exposure due to an attack, mistake or through applications
-      or services used by employees without the organisation approval
+    description: Unauthorized data exposure due to an attack, mistake or through applications or services
+      used by employees without the organisation approval
     translations:
-      fr:
-        name: "Violation de Donn\xE9es, Fuites et Informatique de l'ombre"
-        description: "Exposition non autoris\xE9e de donn\xE9es \xE0 cause d'une attaque,\
-          \ erreur ou via des applications ou services utilis\xE9s par les employ\xE9\
-          s sans l'approbation de l'organisation."
-      de:
-        name: Datenkompromittierung, Datenlecks und Schatten-IT
-        description: Unbefugte Offenlegung von Daten durch einen Angriff, einen Fehler oder durch Anwendungen
-          und Dienste, die Beschäftigte ohne Genehmigung der Organisation verwenden.
+      mk:
+        name: Повреда и истекување на податоци и „Shadow IT“
+        description: Неовластено откривање на податоци поради напад, грешка или преку апликации и услуги
+          што вработените ги користат без одобрение на организацијата
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-020
     ref_id: ICT-020
     name: Physical Security Threats (Manipulation and Theft)
-    description: Unauthorized physical access to hardware, tampering, or theft, leading
-      to data breaches or hardware manipulation
+    description: Unauthorized physical access to hardware, tampering, or theft, leading to data breaches
+      or hardware manipulation
     translations:
-      fr:
-        name: "Menaces de S\xE9curit\xE9 Physique (Manipulation et Vol)"
-        description: "Acc\xE8s physique non autoris\xE9 au mat\xE9riel, alt\xE9ration\
-          \ ou vol, entra\xEEnant des fuites de donn\xE9es ou la manipulation du mat\xE9\
-          riel."
-      de:
-        name: Physische Bedrohungen (Manipulation und Diebstahl)
-        description: Unbefugter physischer Zugriff auf Hardware, Manipulation oder Diebstahl führen zu Datenkompromittierungen
-          oder Hardwaremanipulation.
+      mk:
+        name: Физички безбедносни закани (манипулација и кражба)
+        description: Неовластен физички пристап до хардверот, манипулација или кражба, што води до повреди
+          на податоци или манипулација со хардверот
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-021
     ref_id: ICT-021
     name: Disinformation and Reputation Attacks
-    description: Deliberate dissemination of false or misleading information to damage
-      an organization's reputation, manipulate public perception, or influence decision-making
+    description: Deliberate dissemination of false or misleading information to damage an organization's
+      reputation, manipulate public perception, or influence decision-making
     translations:
-      fr:
-        name: "D\xE9sinformation et Attaques \xE0 la R\xE9putation"
-        description: "Diffusion d\xE9lib\xE9r\xE9e d'informations fausses ou trompeuses\
-          \ pour nuire \xE0 la r\xE9putation d'une organisation, manipuler la perception\
-          \ du public ou influencer la prise de d\xE9cision."
-      de:
-        name: Desinformation und Rufschädigung
-        description: Gezielte Verbreitung falscher oder irreführender Informationen, um den Ruf einer Organisation
-          zu schädigen, die öffentliche Wahrnehmung zu manipulieren oder Entscheidungen zu beeinflussen.
+      mk:
+        name: Дезинформации и напади врз угледот
+        description: Намерно ширење лажни или заведувачки информации за да се наштети на угледот на организацијата,
+          да се манипулира со јавната перцепција или да се влијае врз одлучувањето
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-022
     ref_id: ICT-022
     name: System Outage (Due to Failure, Bugs or Errors)
-    description: Unplanned disruptions in system availability caused by failures,
-      bugs, configuration errors, or human mistakes, leading to operational downtime
-      and potential data loss
+    description: Unplanned disruptions in system availability caused by failures, bugs, configuration
+      errors, or human mistakes, leading to operational downtime and potential data loss
     translations:
-      fr:
-        name: "Panne Syst\xE8me (Due \xE0 des D\xE9faillances, Bugs ou Erreurs)"
-        description: "Interruptions non planifi\xE9es de la disponibilit\xE9 du syst\xE8\
-          me caus\xE9es par des d\xE9faillances, des bugs, des erreurs de configuration\
-          \ ou des erreurs humaines, entra\xEEnant un temps d'arr\xEAt op\xE9rationnel\
-          \ et une perte potentielle de donn\xE9es."
-      de:
-        name: Systemausfall durch Defekte oder Fehler
-        description: Ungeplante Unterbrechungen der Systemverfügbarkeit durch Defekte, Softwarefehler, Konfigurationsfehler
-          oder menschliche Fehler führen zu Betriebsausfällen und möglicherweise zu Datenverlust.
+      mk:
+        name: Прекин на системот (поради откази, грешки во софтверот или човечки грешки)
+        description: Непланирани прекини во достапноста на системите предизвикани од откази, софтверски
+          грешки, грешки во конфигурацијата или човечки грешки, што води до оперативен застој и можна
+          загуба на податоци
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-023
     ref_id: ICT-023
     name: Regulatory Non-Compliance
-    description: Failure to meet legal and regulatory requirements resulting in penalties,
-      legal actions, operational restrictions, and reputational damage
+    description: Failure to meet legal and regulatory requirements resulting in penalties, legal actions,
+      operational restrictions, and reputational damage
     translations:
-      fr:
-        name: "Non-Conformit\xE9 R\xE9glementaire"
-        description: "Non-respect des exigences l\xE9gales et r\xE9glementaires entra\xEE\
-          nant des p\xE9nalit\xE9s, des actions en justice, des restrictions op\xE9\
-          rationnelles et des dommages \xE0 la r\xE9putation."
-      de:
-        name: Nichteinhaltung regulatorischer Anforderungen
-        description: Die Nichteinhaltung gesetzlicher und regulatorischer Anforderungen führt zu Sanktionen,
-          rechtlichen Verfahren, betrieblichen Einschränkungen und Reputationsschäden.
+      mk:
+        name: Регулаторна неусогласеност
+        description: Неисполнување на законските и регулаторните барања, што резултира со казни, правни
+          постапки, оперативни ограничувања и штета на угледот
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-024
     ref_id: ICT-024
     name: Exploitation of Known Vulnerabilities
     description: Exploiting publicly known vulnerabilities in unpatched or unsupported applications, operating
       systems, firmware or online services, often with publicly available exploits
     translations:
-      fr:
-        name: Exploitation de vulnérabilités connues
-        description: Exploitation de vulnérabilités publiques dans des applications, systèmes d'exploitation,
-          micrologiciels ou services en ligne non corrigés ou plus maintenus, souvent à l'aide d'exploits
-          publiquement disponibles.
-      de:
-        name: Ausnutzung bekannter Schwachstellen
-        description: Ausnutzung öffentlich bekannter Schwachstellen in nicht gepatchten oder nicht mehr unterstützten
-          Anwendungen, Betriebssystemen, Firmware oder Online-Diensten, häufig mit öffentlich verfügbaren Exploits.
+      mk:
+        name: Искористување на познати ранливости
+        description: Искористување на јавно познати ранливости во незакрпени или неподдржани апликации,
+          оперативни системи, фирмвер или онлајн услуги, често со јавно достапни експлоатации
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-025
     ref_id: ICT-025
     name: Privileged Account Compromise and Abuse
     description: Compromise or misuse of administrative and other privileged accounts, including escalation
       to privileged access, to take control of systems, disable security controls or move laterally
     translations:
-      fr:
-        name: Compromission et abus de comptes à privilèges
-        description: Compromission ou détournement de comptes d'administration et d'autres comptes à privilèges,
-          y compris par élévation de privilèges, pour prendre le contrôle de systèmes, désactiver des mesures
-          de sécurité ou se déplacer latéralement.
-      de:
-        name: Kompromittierung und Missbrauch privilegierter Konten
-        description: Kompromittierung oder Missbrauch administrativer und anderer privilegierter Konten, auch
-          durch Rechteausweitung, um Systeme zu übernehmen, Sicherheitsmaßnahmen zu deaktivieren oder sich lateral
-          zu bewegen.
+      mk:
+        name: Компромитирање и злоупотреба на привилегирани сметки
+        description: Компромитирање или злоупотреба на администраторски и други привилегирани сметки,
+          вклучително ескалација до привилегиран пристап, за преземање контрола врз системите, оневозможување
+          на безбедносните контроли или латерално движење
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-026
     ref_id: ICT-026
     name: Malicious Documents and Macros
     description: Office documents, macros, scripts or other content opened by users that execute malicious
       code on their workstation
     translations:
-      fr:
-        name: Documents et macros malveillants
-        description: Documents bureautiques, macros, scripts ou autres contenus ouverts par les utilisateurs
-          qui exécutent du code malveillant sur leur poste de travail.
-      de:
-        name: Schädliche Dokumente und Makros
-        description: Office-Dokumente, Makros, Skripte oder andere von Nutzern geöffnete Inhalte, die Schadcode
-          auf ihrem Arbeitsplatzrechner ausführen.
+      mk:
+        name: Злонамерни документи и макроа
+        description: Office документи, макроа, скрипти или друга содржина што корисниците ја отвораат,
+          а што извршува злонамерен код на нивната работна станица
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-027
     ref_id: ICT-027
     name: Multi-Factor Authentication Bypass
     description: Circumventing multi-factor authentication through push fatigue, adversary-in-the-middle
       phishing, session token theft, SIM swapping or weak fallback methods
     translations:
-      fr:
-        name: Contournement de l'authentification multifacteur
-        description: Contournement de l'authentification multifacteur par saturation de demandes de validation,
-          hameçonnage avec interception en temps réel (adversary-in-the-middle), vol de jetons de session,
-          détournement de carte SIM ou recours à des méthodes de secours faibles.
-      de:
-        name: Umgehung der Multi-Faktor-Authentifizierung
-        description: Umgehung der Multi-Faktor-Authentifizierung durch Push-Bombing, Adversary-in-the-Middle-Phishing,
-          Diebstahl von Sitzungstoken, SIM-Swapping oder schwache Ausweichverfahren.
+      mk:
+        name: Заобиколување на повеќефакторската автентикација
+        description: Заобиколување на повеќефакторската автентикација преку замор од push известувања,
+          фишинг со напаѓач во средина (AitM), кражба на токени за сесија, замена на SIM картичка или
+          слаби резервни методи
   - urn: urn:intuitem:risk:threat:intuitem-common-catalog:ict-028
     ref_id: ICT-028
     name: Destruction of Data and Backups
     description: Deliberate deletion, corruption or encryption of data and of its backups to prevent recovery
       and maximise the impact of an attack
     translations:
-      fr:
-        name: Destruction de données et de sauvegardes
-        description: Suppression, altération ou chiffrement délibérés des données et de leurs sauvegardes
-          afin d'empêcher la restauration et d'amplifier l'impact d'une attaque.
-      de:
-        name: Zerstörung von Daten und Sicherungen
-        description: Vorsätzliches Löschen, Beschädigen oder Verschlüsseln von Daten und deren Sicherungen,
-          um die Wiederherstellung zu verhindern und die Wirkung eines Angriffs zu maximieren.
+      mk:
+        name: Уништување на податоците и резервните копии
+        description: Намерно бришење, оштетување или шифрирање на податоците и нивните резервни копии
+          за да се спречи обновата и да се максимизира влијанието на нападот

@@ -1,39 +1,31 @@
-convert_library_version: 'v2 ; Compat Mode: [0] {[v2.1] (DEFAULT) Don''t use any Compatibility
-  Mode}'
+convert_library_version: 'v2 ; Compat Mode: [0] {[v2.1] (DEFAULT) Don''t use any Compatibility Mode}'
 urn: urn:intuitem:risk:library:core-cybersecurity-metrics
 locale: en
 ref_id: CORE-CYBER-METRICS
 name: Core Cybersecurity Metrics
-description: A curated set of 25 essential cybersecurity metrics for organizations
-  of all sizes and industries. Covers governance, vulnerabilities, incidents, access,
-  awareness, third-party risk, assets, and resilience.
+description: A curated set of 25 essential cybersecurity metrics for organizations of all sizes and industries.
+  Covers governance, vulnerabilities, incidents, access, awareness, third-party risk, assets, and resilience.
 copyright: intuitem
-version: 3
+version: 4
 publication_date: 2025-12-13
 provider: intuitem
 packager: intuitem
 translations:
-  de:
-    name: Zentrale Cybersicherheitskennzahlen
-    description: |-
-      Eine Auswahl von 25 wesentlichen Cybersicherheitskennzahlen für Organisationen aller Größen und Branchen. Deckt Governance, Schwachstellen, Vorfälle, Zugriff, Sensibilisierung, Drittparteirisiken, Assets und Resilienz ab.
-
-      Hinweis zur Übersetzung: KI-gestützte maschinelle Übersetzung mit anschließender sprachlicher und fachlicher Prüfung durch den KI-Assistenten. Keine offizielle Übersetzung von intuitem oder der genannten Behörden; keine unabhängige menschliche Prüfung.
+  mk:
+    name: Основни метрики за сајбер безбедност
+    description: Избран сет од 25 суштински метрики за сајбер безбедност за организации од сите големини
+      и дејности. Опфаќа управување, ранливости, инциденти, пристап, свест, ризик од трети страни, средства
+      и отпорност.
 objects:
   metric_definitions:
   - urn: urn:intuitem:risk:metric:core:gov-01
     ref_id: GOV-01
     name: Compliance Score
-    description: Overall compliance percentage across applicable security frameworks
-      and regulatory requirements
+    description: Overall compliance percentage across applicable security frameworks and regulatory requirements
     translations:
-      fr:
-        name: Score de conformité
-        description: Pourcentage global de conformité au regard des référentiels de sécurité et des exigences réglementaires applicables
-      de:
-        name: Konformitätsgrad
-        description: Gesamter prozentualer Erfüllungsgrad der anwendbaren Sicherheitsreferenzwerke und regulatorischen
-          Anforderungen
+      mk:
+        name: Оценка на усогласеност
+        description: Вкупен процент на усогласеност со применливите безбедносни рамки и регулаторни барања
     category: quantitative
     unit: percentage
     higher_is_better: true
@@ -41,113 +33,97 @@ objects:
   - urn: urn:intuitem:risk:metric:core:gov-02
     ref_id: GOV-02
     name: Security Program Maturity
-    description: Overall maturity of the organization's cybersecurity program based
-      on people, process, and technology capabilities
+    description: Overall maturity of the organization's cybersecurity program based on people, process,
+      and technology capabilities
     translations:
-      fr:
-        name: Maturité du programme de sécurité
-        description: Maturité globale du programme de cybersécurité de l'organisation fondée sur les capacités humaines, les processus et les technologies
-      de:
-        name: Reifegrad des Sicherheitsprogramms
-        description: Gesamtreife des Cybersicherheitsprogramms der Organisation anhand der personellen, prozessualen
-          und technischen Fähigkeiten
+      mk:
+        name: Зрелост на безбедносната програма
+        description: Вкупна зрелост на програмата за сајбер безбедност на организацијата врз основа на
+          способностите на луѓето, процесите и технологијата
     category: qualitative
     higher_is_better: true
     choices_definition:
     - name: Initial
       description: Ad-hoc security practices, reactive approach, no formal program
       translations:
-        de:
-          name: Initial
-          description: Ad-hoc-Sicherheitspraktiken, reaktives Vorgehen, kein formelles Programm
+        mk:
+          name: Почетна
+          description: Ад хок безбедносни практики, реактивен пристап, нема формална програма
     - name: Developing
       description: Basic policies exist, some processes documented, limited resources
       translations:
-        de:
-          name: Im Aufbau
-          description: Grundlegende Richtlinien vorhanden, einige Prozesse dokumentiert, begrenzte Ressourcen
+        mk:
+          name: Во развој
+          description: Постојат основни политики, дел од процесите се документирани, ограничени ресурси
     - name: Defined
       description: Formal security program, documented processes, dedicated team
       translations:
-        de:
-          name: Definiert
-          description: Formelles Sicherheitsprogramm, dokumentierte Prozesse, eigenes zuständiges Team
+        mk:
+          name: Дефинирана
+          description: Формална безбедносна програма, документирани процеси, посветен тим
     - name: Managed
       description: Metrics-driven, regular assessments, integrated with business
       translations:
-        de:
-          name: Gesteuert
-          description: Kennzahlengestützte Steuerung, regelmäßige Bewertungen, in die Geschäftsprozesse eingebunden
+        mk:
+          name: Управувана
+          description: Водена од метрики, редовни проценки, интегрирана со деловното работење
     - name: Optimized
-      description: Continuous improvement, proactive threat management, security culture
-        embedded
+      description: Continuous improvement, proactive threat management, security culture embedded
       translations:
-        de:
-          name: Optimiert
-          description: Kontinuierliche Verbesserung, vorausschauendes Bedrohungsmanagement, verankerte Sicherheitskultur
+        mk:
+          name: Оптимизирана
+          description: Постојано подобрување, проактивно управување со заканите, вградена безбедносна
+            култура
   - urn: urn:intuitem:risk:metric:core:gov-03
     ref_id: GOV-03
     name: Risk Management Maturity
-    description: Maturity of risk identification, assessment, treatment, and monitoring
-      processes
+    description: Maturity of risk identification, assessment, treatment, and monitoring processes
     translations:
-      fr:
-        name: Maturité de la gestion des risques
-        description: Maturité des processus d'identification, d'évaluation, de traitement et de surveillance des risques
-      de:
-        name: Reifegrad des Risikomanagements
-        description: Reifegrad der Prozesse zur Risikoidentifikation, Risikobewertung, Risikobehandlung und
-          Risikoüberwachung
+      mk:
+        name: Зрелост на управувањето со ризик
+        description: Зрелост на процесите за идентификување, проценка, третман и следење на ризиците
     category: qualitative
     higher_is_better: true
     choices_definition:
     - name: Initial
       description: No formal risk process, risks addressed reactively
       translations:
-        de:
-          name: Initial
-          description: Kein formeller Risikomanagementprozess; Risiken werden reaktiv behandelt
+        mk:
+          name: Почетна
+          description: Нема формален процес за ризик, ризиците се решаваат реактивно
     - name: Developing
       description: Basic risk register, informal assessments
       translations:
-        de:
-          name: Im Aufbau
-          description: Einfaches Risikoregister, informelle Bewertungen
+        mk:
+          name: Во развој
+          description: Основен регистар на ризици, неформални проценки
     - name: Defined
-      description: Formal risk framework, regular assessments, documented treatment
-        plans
+      description: Formal risk framework, regular assessments, documented treatment plans
       translations:
-        de:
-          name: Definiert
-          description: Formelles Rahmenwerk für das Risikomanagement, regelmäßige Bewertungen, dokumentierte
-            Risikobehandlungspläne
+        mk:
+          name: Дефинирана
+          description: Формална рамка за ризик, редовни проценки, документирани планови за третман
     - name: Managed
       description: Quantitative risk analysis, KRIs tracked, risk-informed decisions
       translations:
-        de:
-          name: Gesteuert
-          description: Quantitative Risikoanalyse, Überwachung von Risikokennzahlen (KRI), risikobasierte Entscheidungen
+        mk:
+          name: Управувана
+          description: Квантитативна анализа на ризикот, следење KRI, одлуки засновани на ризик
     - name: Optimized
-      description: Real-time risk monitoring, predictive analytics, full business
-        integration
+      description: Real-time risk monitoring, predictive analytics, full business integration
       translations:
-        de:
-          name: Optimiert
-          description: Risikoüberwachung in Echtzeit, vorausschauende Analysen, vollständige Einbindung in die
-            Geschäftsprozesse
+        mk:
+          name: Оптимизирана
+          description: Следење на ризиците во реално време, предвидувачка аналитика, целосна интеграција
+            со деловното работење
   - urn: urn:intuitem:risk:metric:core:vuln-01
     ref_id: VULN-01
     name: Open Critical/High Vulnerabilities
-    description: Total count of unresolved critical and high severity vulnerabilities
-      across all systems
+    description: Total count of unresolved critical and high severity vulnerabilities across all systems
     translations:
-      fr:
-        name: Vulnérabilités critiques/élevées ouvertes
-        description: Nombre total de vulnérabilités critiques et de gravité élevée non résolues sur l'ensemble des systèmes
-      de:
-        name: Offene kritische und schwere Schwachstellen
-        description: Gesamtzahl der noch nicht behobenen Schwachstellen mit kritischem oder hohem Schweregrad
-          über alle Systeme hinweg
+      mk:
+        name: Отворени критични/високи ранливости
+        description: Вкупен број нерешени ранливости со критична и висока сериозност низ сите системи
     category: quantitative
     unit: count
     higher_is_better: false
@@ -155,16 +131,12 @@ objects:
   - urn: urn:intuitem:risk:metric:core:vuln-02
     ref_id: VULN-02
     name: Vulnerability Remediation Time
-    description: Average number of days to remediate identified vulnerabilities from
-      discovery to resolution
+    description: Average number of days to remediate identified vulnerabilities from discovery to resolution
     translations:
-      fr:
-        name: Délai de remédiation des vulnérabilités
-        description: Nombre moyen de jours nécessaires pour remédier aux vulnérabilités identifiées, de leur découverte à leur résolution
-      de:
-        name: Dauer der Schwachstellenbehebung
-        description: Durchschnittliche Anzahl von Tagen von der Entdeckung bis zur Behebung identifizierter
-          Schwachstellen
+      mk:
+        name: Време за отстранување на ранливости
+        description: Просечен број денови за отстранување на идентификуваните ранливости, од откривање
+          до решавање
     category: quantitative
     unit: days
     higher_is_better: false
@@ -172,16 +144,11 @@ objects:
   - urn: urn:intuitem:risk:metric:core:vuln-03
     ref_id: VULN-03
     name: Patch Coverage
-    description: Percentage of systems with security patches applied within defined
-      SLA timeframes
+    description: Percentage of systems with security patches applied within defined SLA timeframes
     translations:
-      fr:
-        name: Couverture des correctifs
-        description: Pourcentage de systèmes sur lesquels les correctifs de sécurité ont été appliqués dans les délais SLA définis
-      de:
-        name: Patch-Abdeckung
-        description: Anteil der Systeme in Prozent, auf denen Sicherheitspatches innerhalb der festgelegten
-          SLA-Fristen installiert wurden
+      mk:
+        name: Покриеност со закрпи
+        description: Процент на системи со безбедносни закрпи применети во рамки на дефинираните SLA рокови
     category: quantitative
     unit: percentage
     higher_is_better: true
@@ -189,15 +156,11 @@ objects:
   - urn: urn:intuitem:risk:metric:core:inc-01
     ref_id: INC-01
     name: Security Incidents Count
-    description: Total number of confirmed security incidents during the measurement
-      period
+    description: Total number of confirmed security incidents during the measurement period
     translations:
-      fr:
-        name: Nombre d'incidents de sécurité
-        description: Nombre total d'incidents de sécurité confirmés au cours de la période de mesure
-      de:
-        name: Anzahl der Sicherheitsvorfälle
-        description: Gesamtzahl bestätigter Sicherheitsvorfälle im Messzeitraum
+      mk:
+        name: Број на безбедносни инциденти
+        description: Вкупен број потврдени безбедносни инциденти во периодот на мерење
     category: quantitative
     unit: count
     higher_is_better: false
@@ -205,16 +168,11 @@ objects:
   - urn: urn:intuitem:risk:metric:core:inc-02
     ref_id: INC-02
     name: Mean Time to Detect
-    description: Average time in hours from when a security incident occurs to when
-      it is detected
+    description: Average time in hours from when a security incident occurs to when it is detected
     translations:
-      fr:
-        name: Temps moyen de détection
-        description: Temps moyen en heures entre la survenue d'un incident de sécurité et sa détection
-      de:
-        name: Mittlere Erkennungszeit
-        description: Durchschnittliche Zeit in Stunden vom Eintritt eines Sicherheitsvorfalls bis zu seiner
-          Erkennung
+      mk:
+        name: Просечно време за откривање (MTTD)
+        description: Просечно време во часови од настанувањето на безбедносниот инцидент до неговото откривање
     category: quantitative
     unit: hours
     higher_is_better: false
@@ -222,16 +180,11 @@ objects:
   - urn: urn:intuitem:risk:metric:core:inc-03
     ref_id: INC-03
     name: Mean Time to Respond
-    description: Average time in hours from incident detection to initial containment
-      response
+    description: Average time in hours from incident detection to initial containment response
     translations:
-      fr:
-        name: Temps moyen de réponse
-        description: Temps moyen en heures entre la détection d'un incident et la réponse initiale de confinement
-      de:
-        name: Mittlere Reaktionszeit
-        description: Durchschnittliche Zeit in Stunden von der Erkennung eines Vorfalls bis zur ersten Reaktion
-          zur Eindämmung
+      mk:
+        name: Просечно време за одговор (MTTR)
+        description: Просечно време во часови од откривањето на инцидентот до почетното ограничување
     category: quantitative
     unit: hours
     higher_is_better: false
@@ -239,67 +192,55 @@ objects:
   - urn: urn:intuitem:risk:metric:core:inc-04
     ref_id: INC-04
     name: Incident Response Readiness
-    description: Assessment of the organization's preparedness to detect, respond
-      to, and recover from security incidents
+    description: Assessment of the organization's preparedness to detect, respond to, and recover from
+      security incidents
     translations:
-      fr:
-        name: Préparation à la réponse aux incidents
-        description: Évaluation de la capacité de l'organisation à détecter les incidents de sécurité, à y répondre et à s'en remettre
-      de:
-        name: Bereitschaft zur Vorfallbehandlung
-        description: Bewertung der Vorbereitung der Organisation auf die Erkennung und Behandlung von Sicherheitsvorfällen
-          sowie die anschließende Wiederherstellung
+      mk:
+        name: Подготвеност за одговор на инциденти
+        description: Проценка на подготвеноста на организацијата да открие, одговори и закрепне од безбедносни
+          инциденти
     category: qualitative
     higher_is_better: true
     choices_definition:
     - name: Unprepared
       description: No incident response plan, no defined roles or procedures
       translations:
-        de:
-          name: Unvorbereitet
-          description: Kein Plan zur Vorfallbehandlung, keine festgelegten Rollen oder Verfahren
+        mk:
+          name: Неподготвена
+          description: Нема план за одговор на инциденти, ниту дефинирани улоги или процедури
     - name: Basic
       description: Documented IR plan exists but rarely tested, limited team training
       translations:
-        de:
-          name: Grundlegend
-          description: Dokumentierter Plan zur Vorfallbehandlung vorhanden, aber selten getestet; begrenzte
-            Schulung des Teams
+        mk:
+          name: Основна
+          description: Постои документиран план за одговор, но ретко се тестира, ограничена обука на тимот
     - name: Capable
       description: IR plan tested annually, trained response team, basic playbooks
       translations:
-        de:
-          name: Handlungsfähig
-          description: Plan zur Vorfallbehandlung wird jährlich getestet, geschultes Reaktionsteam, grundlegende
-            Ablaufanweisungen (Playbooks)
+        mk:
+          name: Способна
+          description: Планот се тестира годишно, обучен тим за одговор, основни сценарија за постапување
+            (playbooks)
     - name: Advanced
-      description: Regular tabletop and live exercises, automated detection, established
-        partnerships
+      description: Regular tabletop and live exercises, automated detection, established partnerships
       translations:
-        de:
-          name: Fortgeschritten
-          description: Regelmäßige Planspiele und praktische Übungen, automatisierte Erkennung, etablierte Partnerschaften
+        mk:
+          name: Напредна
+          description: Редовни симулации и вежби во живо, автоматизирано откривање, воспоставени партнерства
     - name: Elite
-      description: 24/7 response capability, threat hunting, continuous improvement
-        from lessons learned
+      description: 24/7 response capability, threat hunting, continuous improvement from lessons learned
       translations:
-        de:
-          name: Führend
-          description: Reaktionsfähigkeit rund um die Uhr (24/7), aktive Bedrohungssuche, kontinuierliche Verbesserung
-            anhand gewonnener Erkenntnisse
+        mk:
+          name: Врвна
+          description: Способност за одговор 24/7, лов на закани, постојано подобрување од научените лекции
   - urn: urn:intuitem:risk:metric:core:iam-01
     ref_id: IAM-01
     name: MFA Adoption Rate
-    description: Percentage of user accounts and critical systems protected by multi-factor
-      authentication
+    description: Percentage of user accounts and critical systems protected by multi-factor authentication
     translations:
-      fr:
-        name: Taux d'adoption de l'authentification multi-facteurs
-        description: Pourcentage de comptes utilisateurs et de systèmes critiques protégés par une authentification multi-facteurs
-      de:
-        name: MFA-Abdeckung
-        description: Anteil der durch Multi-Faktor-Authentifizierung geschützten Benutzerkonten und kritischen
-          Systeme in Prozent
+      mk:
+        name: Стапка на примена на MFA
+        description: Процент на кориснички сметки и критични системи заштитени со повеќефакторска автентикација
     category: quantitative
     unit: percentage
     higher_is_better: true
@@ -307,16 +248,13 @@ objects:
   - urn: urn:intuitem:risk:metric:core:iam-02
     ref_id: IAM-02
     name: Privileged Access Coverage
-    description: Percentage of privileged accounts managed through privileged access
-      management (PAM) controls
+    description: Percentage of privileged accounts managed through privileged access management (PAM)
+      controls
     translations:
-      fr:
-        name: Couverture des accès privilégiés
-        description: Pourcentage de comptes privilégiés gérés au moyen de contrôles de gestion des accès privilégiés (PAM)
-      de:
-        name: Absicherung privilegierter Konten
-        description: Anteil privilegierter Konten in Prozent, die durch Maßnahmen zur Verwaltung privilegierter
-          Zugriffe (PAM) gesteuert werden
+      mk:
+        name: Покриеност на привилегираниот пристап
+        description: Процент на привилегирани сметки управувани преку контроли за управување со привилегиран
+          пристап (PAM)
     category: quantitative
     unit: percentage
     higher_is_better: true
@@ -324,16 +262,13 @@ objects:
   - urn: urn:intuitem:risk:metric:core:iam-03
     ref_id: IAM-03
     name: Dormant Account Rate
-    description: Percentage of user accounts that have been inactive beyond the defined
-      threshold and not yet disabled
+    description: Percentage of user accounts that have been inactive beyond the defined threshold and
+      not yet disabled
     translations:
-      fr:
-        name: Taux de comptes inactifs
-        description: Pourcentage de comptes utilisateurs inactifs au-delà du seuil défini et qui n'ont pas encore été désactivés
-      de:
-        name: Anteil inaktiver Konten
-        description: Anteil der Benutzerkonten in Prozent, deren Inaktivität die festgelegte Grenze überschreitet
-          und die noch nicht deaktiviert wurden
+      mk:
+        name: Стапка на неактивни сметки
+        description: Процент на кориснички сметки што се неактивни подолго од дефинираниот праг, а сè
+          уште не се оневозможени
     category: quantitative
     unit: percentage
     higher_is_better: false
@@ -341,16 +276,13 @@ objects:
   - urn: urn:intuitem:risk:metric:core:awr-01
     ref_id: AWR-01
     name: Security Training Completion
-    description: Percentage of employees who have completed mandatory security awareness
-      training within the required timeframe
+    description: Percentage of employees who have completed mandatory security awareness training within
+      the required timeframe
     translations:
-      fr:
-        name: Achèvement de la formation à la sécurité
-        description: Pourcentage d'employés ayant terminé la formation obligatoire de sensibilisation à la sécurité dans le délai requis
-      de:
-        name: Abschlussquote Sicherheitsschulungen
-        description: Anteil der Beschäftigten in Prozent, die die verpflichtende Sicherheitssensibilisierung
-          innerhalb des vorgegebenen Zeitraums abgeschlossen haben
+      mk:
+        name: Завршена безбедносна обука
+        description: Процент на вработени што ја завршиле задолжителната обука за безбедносна свест во
+          предвидениот рок
     category: quantitative
     unit: percentage
     higher_is_better: true
@@ -358,16 +290,13 @@ objects:
   - urn: urn:intuitem:risk:metric:core:awr-02
     ref_id: AWR-02
     name: Phishing Click Rate
-    description: Percentage of employees who clicked on simulated phishing emails
-      during awareness testing campaigns
+    description: Percentage of employees who clicked on simulated phishing emails during awareness testing
+      campaigns
     translations:
-      fr:
-        name: Taux de clics d'hameçonnage
-        description: Pourcentage d'employés ayant cliqué sur des e-mails d'hameçonnage simulés lors des campagnes de test de sensibilisation
-      de:
-        name: Phishing-Klickrate
-        description: Anteil der Beschäftigten in Prozent, die bei Sensibilisierungstests in simulierten Phishing-E-Mails
-          auf einen Link geklickt haben
+      mk:
+        name: Стапка на кликови на фишинг
+        description: Процент на вработени што кликнале на симулирани фишинг пораки во кампањите за тестирање
+          на свеста
     category: quantitative
     unit: percentage
     higher_is_better: false
@@ -375,16 +304,13 @@ objects:
   - urn: urn:intuitem:risk:metric:core:tpr-01
     ref_id: TPR-01
     name: Vendor Assessment Coverage
-    description: Percentage of critical and high-risk vendors that have completed
-      security assessments within the required period
+    description: Percentage of critical and high-risk vendors that have completed security assessments
+      within the required period
     translations:
-      fr:
-        name: Couverture des évaluations des fournisseurs
-        description: Pourcentage de fournisseurs critiques et à haut risque ayant réalisé les évaluations de sécurité dans la période requise
-      de:
-        name: Prüfquote kritischer Anbieter
-        description: Anteil kritischer Anbieter und Anbieter mit hohem Risiko in Prozent, deren Sicherheitsprüfung
-          innerhalb des erforderlichen Zeitraums abgeschlossen wurde
+      mk:
+        name: Покриеност со проценки на добавувачите
+        description: Процент на критични и високоризични добавувачи што ја завршиле безбедносната проценка
+          во предвидениот период
     category: quantitative
     unit: percentage
     higher_is_better: true
@@ -392,16 +318,13 @@ objects:
   - urn: urn:intuitem:risk:metric:core:ast-01
     ref_id: AST-01
     name: Asset Inventory Coverage
-    description: Percentage of IT assets (hardware, software, cloud resources) documented
-      in the asset inventory
+    description: Percentage of IT assets (hardware, software, cloud resources) documented in the asset
+      inventory
     translations:
-      fr:
-        name: Couverture de l'inventaire des actifs
-        description: Pourcentage d'actifs informatiques (matériel, logiciels, ressources cloud) documentés dans l'inventaire des actifs
-      de:
-        name: Vollständigkeit des Asset-Inventars
-        description: Anteil der IT-Assets (Hardware, Software, Cloud-Ressourcen) in Prozent, die im Asset-Inventar
-          dokumentiert sind
+      mk:
+        name: Покриеност на пописот на средства
+        description: Процент на ИТ средства (хардвер, софтвер, ресурси во облак) евидентирани во пописот
+          на средства
     category: quantitative
     unit: percentage
     higher_is_better: true
@@ -409,115 +332,100 @@ objects:
   - urn: urn:intuitem:risk:metric:core:dat-01
     ref_id: DAT-01
     name: Data Protection Maturity
-    description: Maturity of data classification, encryption, data loss prevention,
-      and privacy controls
+    description: Maturity of data classification, encryption, data loss prevention, and privacy controls
     translations:
-      fr:
-        name: Maturité de la protection des données
-        description: Maturité de la classification des données, du chiffrement, de la prévention des pertes de données et des contrôles de protection de la vie privée
-      de:
-        name: Reifegrad des Schutzes von Daten
-        description: Reifegrad von Datenklassifizierung, Verschlüsselung, Schutz vor Datenabfluss und Datenschutzmaßnahmen
+      mk:
+        name: Зрелост на заштитата на податоците
+        description: Зрелост на класификацијата на податоци, шифрирањето, спречувањето загуба на податоци
+          и контролите за приватност
     category: qualitative
     higher_is_better: true
     choices_definition:
     - name: Initial
       description: No data classification, encryption used inconsistently, no DLP
       translations:
-        de:
-          name: Initial
-          description: Keine Datenklassifizierung, uneinheitliche Verschlüsselung, kein Schutz vor Datenabfluss
-            (DLP)
+        mk:
+          name: Почетна
+          description: Нема класификација на податоците, шифрирањето се користи недоследно, нема DLP
     - name: Developing
       description: Basic classification scheme, encryption for some data at rest
       translations:
-        de:
-          name: Im Aufbau
-          description: Grundlegendes Klassifizierungsschema, Verschlüsselung für einen Teil der gespeicherten
-            Daten
+        mk:
+          name: Во развој
+          description: Основна шема за класификација, шифрирање на дел од податоците во мирување
     - name: Defined
       description: Formal classification policy, encryption standards, basic DLP rules
       translations:
-        de:
-          name: Definiert
-          description: Formelle Klassifizierungsrichtlinie, Verschlüsselungsstandards, grundlegende DLP-Regeln
+        mk:
+          name: Дефинирана
+          description: Формална политика за класификација, стандарди за шифрирање, основни DLP правила
     - name: Managed
       description: Automated classification, comprehensive encryption, DLP with monitoring
       translations:
-        de:
-          name: Gesteuert
-          description: Automatisierte Klassifizierung, umfassende Verschlüsselung, DLP mit Überwachung
+        mk:
+          name: Управувана
+          description: Автоматизирана класификација, сеопфатно шифрирање, DLP со следење
     - name: Optimized
-      description: Data-centric security, advanced DLP with ML, privacy by design
-        embedded
+      description: Data-centric security, advanced DLP with ML, privacy by design embedded
       translations:
-        de:
-          name: Optimiert
-          description: Datenzentrierte Sicherheit, fortgeschrittene DLP mit maschinellem Lernen, verankerter
-            Datenschutz durch Technikgestaltung
+        mk:
+          name: Оптимизирана
+          description: Безбедност насочена кон податоците, напреден DLP со машинско учење, вградена приватност
+            уште при дизајнот
   - urn: urn:intuitem:risk:metric:core:mon-01
     ref_id: MON-01
     name: Security Monitoring Maturity
-    description: Maturity of security monitoring, logging, SIEM capabilities, and
-      threat detection
+    description: Maturity of security monitoring, logging, SIEM capabilities, and threat detection
     translations:
-      fr:
-        name: Maturité de la surveillance de la sécurité
-        description: Maturité de la surveillance de la sécurité, de la journalisation, des capacités SIEM et de la détection des menaces
-      de:
-        name: Reifegrad des Sicherheitsmonitorings
-        description: Reifegrad von Sicherheitsüberwachung, Protokollierung, SIEM-Fähigkeiten und Bedrohungserkennung
+      mk:
+        name: Зрелост на безбедносното следење
+        description: Зрелост на безбедносното следење, евидентирањето, SIEM способностите и откривањето
+          закани
     category: qualitative
     higher_is_better: true
     choices_definition:
     - name: Initial
       description: Minimal logging, no centralized monitoring, reactive only
       translations:
-        de:
-          name: Initial
-          description: Minimale Protokollierung, keine zentrale Überwachung, ausschließlich reaktives Vorgehen
+        mk:
+          name: Почетна
+          description: Минимално евидентирање, нема централизирано следење, само реактивно
     - name: Developing
       description: Basic log collection, some alerting, limited coverage
       translations:
-        de:
-          name: Im Aufbau
-          description: Grundlegende Protokollsammlung, teilweise Alarmierung, begrenzte Abdeckung
+        mk:
+          name: Во развој
+          description: Основно собирање логови, дел од известувањата, ограничена покриеност
     - name: Defined
       description: Centralized SIEM, correlation rules, defined use cases, 8x5 monitoring
       translations:
-        de:
-          name: Definiert
-          description: Zentrales SIEM, Korrelationsregeln, definierte Anwendungsfälle, Überwachung an fünf Tagen
-            für jeweils acht Stunden (8x5)
+        mk:
+          name: Дефинирана
+          description: Централизиран SIEM, правила за корелација, дефинирани случаи на употреба, следење
+            8x5
     - name: Managed
-      description: Comprehensive visibility, tuned detection, threat intelligence
-        integrated, 24x7 monitoring
+      description: Comprehensive visibility, tuned detection, threat intelligence integrated, 24x7 monitoring
       translations:
-        de:
-          name: Gesteuert
-          description: Umfassender Überblick, abgestimmte Erkennung, eingebundene Bedrohungsinformationen, Überwachung
-            rund um die Uhr (24x7)
+        mk:
+          name: Управувана
+          description: Сеопфатна видливост, прилагодено откривање, интегрирано разузнавање за закани,
+            следење 24x7
     - name: Optimized
-      description: Advanced analytics, proactive threat hunting, automated response,
-        continuous optimization
+      description: Advanced analytics, proactive threat hunting, automated response, continuous optimization
       translations:
-        de:
-          name: Optimiert
-          description: Fortgeschrittene Analysen, vorausschauende aktive Bedrohungssuche, automatisierte Reaktion,
-            kontinuierliche Optimierung
+        mk:
+          name: Оптимизирана
+          description: Напредна аналитика, проактивен лов на закани, автоматизиран одговор, постојана
+            оптимизација
   - urn: urn:intuitem:risk:metric:core:res-01
     ref_id: RES-01
     name: Backup Coverage
-    description: Percentage of critical systems and data with regular automated backups
-      configured
+    description: Percentage of critical systems and data with regular automated backups configured
     translations:
-      fr:
-        name: Couverture des sauvegardes
-        description: Pourcentage de systèmes critiques et de données pour lesquels des sauvegardes automatisées régulières sont configurées
-      de:
-        name: Backup-Abdeckung
-        description: Anteil kritischer Systeme und Daten in Prozent, für die regelmäßige automatisierte Sicherungen
-          eingerichtet sind
+      mk:
+        name: Покриеност со резервни копии
+        description: Процент на критични системи и податоци со конфигурирани редовни автоматски резервни
+          копии
     category: quantitative
     unit: percentage
     higher_is_better: true
@@ -525,16 +433,13 @@ objects:
   - urn: urn:intuitem:risk:metric:core:res-02
     ref_id: RES-02
     name: Immutable Backup Coverage
-    description: Percentage of critical systems with air-gapped or immutable backups
-      protected against ransomware
+    description: Percentage of critical systems with air-gapped or immutable backups protected against
+      ransomware
     translations:
-      fr:
-        name: Couverture des sauvegardes immuables
-        description: Pourcentage de systèmes critiques disposant de sauvegardes isolées ou immuables protégées contre les rançongiciels
-      de:
-        name: Abdeckung geschützter Backups
-        description: Anteil kritischer Systeme in Prozent, deren Backups durch Netztrennung (Air Gap) oder Unveränderbarkeit
-          gegen Ransomware geschützt sind
+      mk:
+        name: Покриеност со непроменливи резервни копии
+        description: Процент на критични системи со изолирани (air-gapped) или непроменливи резервни копии
+          заштитени од ransomware
     category: quantitative
     unit: percentage
     higher_is_better: true
@@ -542,16 +447,12 @@ objects:
   - urn: urn:intuitem:risk:metric:core:res-03
     ref_id: RES-03
     name: Backup Test Success Rate
-    description: Percentage of backup restoration tests completed successfully within
-      defined RTO
+    description: Percentage of backup restoration tests completed successfully within defined RTO
     translations:
-      fr:
-        name: Taux de réussite des tests de sauvegarde
-        description: Pourcentage de tests de restauration des sauvegardes réalisés avec succès dans le délai RTO défini
-      de:
-        name: Erfolgsquote der Wiederherstellungstests
-        description: Anteil der erfolgreich innerhalb der festgelegten Wiederanlaufzeit (RTO) abgeschlossenen
-          Backup-Wiederherstellungstests in Prozent
+      mk:
+        name: Стапка на успешни тестови на резервни копии
+        description: Процент на тестови за враќање од резервни копии успешно завршени во рамки на дефинираното
+          RTO
     category: quantitative
     unit: percentage
     higher_is_better: true
@@ -559,16 +460,13 @@ objects:
   - urn: urn:intuitem:risk:metric:core:res-04
     ref_id: RES-04
     name: Recovery Objectives Compliance
-    description: Percentage of critical systems meeting their defined Recovery Time
-      Objective (RTO) and Recovery Point Objective (RPO)
+    description: Percentage of critical systems meeting their defined Recovery Time Objective (RTO) and
+      Recovery Point Objective (RPO)
     translations:
-      fr:
-        name: Conformité aux objectifs de reprise
-        description: Pourcentage de systèmes critiques respectant leurs objectifs de délai de reprise (RTO) et de point de reprise (RPO) définis
-      de:
-        name: Einhaltung der Wiederherstellungsziele
-        description: Anteil kritischer Systeme in Prozent, die ihre festgelegte Wiederanlaufzeit (RTO) und ihren
-          maximal tolerierbaren Datenverlust in Zeit (RPO) einhalten
+      mk:
+        name: Усогласеност со целите за обнова
+        description: Процент на критични системи што ги исполнуваат дефинираните Целно време за обнова
+          (RTO) и Целна точка за обнова (RPO)
     category: quantitative
     unit: percentage
     higher_is_better: true
@@ -576,16 +474,13 @@ objects:
   - urn: urn:intuitem:risk:metric:core:res-05
     ref_id: RES-05
     name: BCP/DRP Coverage
-    description: Percentage of critical business processes with documented and tested
-      business continuity and disaster recovery plans
+    description: Percentage of critical business processes with documented and tested business continuity
+      and disaster recovery plans
     translations:
-      fr:
-        name: Couverture du PCA/PRA
-        description: Pourcentage de processus métiers critiques disposant de plans de continuité d'activité et de reprise après sinistre documentés et testés
-      de:
-        name: Abdeckung durch Notfallpläne
-        description: Anteil kritischer Geschäftsprozesse in Prozent, für die dokumentierte und getestete Pläne
-          zur Geschäftsfortführung und Wiederherstellung vorhanden sind
+      mk:
+        name: Покриеност со BCP/DRP
+        description: Процент на критични деловни процеси со документирани и тестирани планови за континуитет
+          на работењето и обнова по катастрофа
     category: quantitative
     unit: percentage
     higher_is_better: true
@@ -593,16 +488,13 @@ objects:
   - urn: urn:intuitem:risk:metric:core:res-06
     ref_id: RES-06
     name: Mean Time to Recovery
-    description: Average time in hours to fully restore critical business operations
-      after a major incident or disaster
+    description: Average time in hours to fully restore critical business operations after a major incident
+      or disaster
     translations:
-      fr:
-        name: Temps moyen de reprise
-        description: Temps moyen en heures nécessaire pour rétablir complètement les opérations métiers critiques après un incident majeur ou un sinistre
-      de:
-        name: Mittlere Wiederherstellungszeit
-        description: Durchschnittliche Zeit in Stunden bis zur vollständigen Wiederherstellung kritischer Geschäftsabläufe
-          nach einem schwerwiegenden Vorfall oder einer Katastrophe
+      mk:
+        name: Просечно време за закрепнување
+        description: Просечно време во часови за целосно враќање на критичните деловни операции по голем
+          инцидент или катастрофа
     category: quantitative
     unit: hours
     higher_is_better: false
