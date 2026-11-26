@@ -59,6 +59,8 @@ class Command(BaseCommand):
             except Exception:
                 logger.error("Invalid library file", filename=fname)
 
+        self.prune_removed_builtin_libraries(library_files)
+
         invisible_libraries = (
             LoadedLibrary.objects.filter(
                 builtin=False,
@@ -98,3 +100,56 @@ class Command(BaseCommand):
                 content=dict(),
                 autoload=True,
             )
+
+    def prune_removed_builtin_libraries(self, library_files):
+        """RegTech: drop built-in store entries whose YAML file was removed.
+
+        Only built-in libraries that are not loaded are removed; libraries
+        uploaded by users (builtin=False) and anything already loaded stay.
+        """
+        import yaml
+
+        from core.models import Preset, PresetJourney
+
+        file_urns = set()
+        for fname in library_files:
+            try:
+                with open(fname, encoding="utf-8") as f:
+                    for line in f:
+                        if line.startswith("urn:"):
+                            file_urns.add(yaml.safe_load(line)["urn"])
+                            break
+            except Exception:
+                logger.warning("Could not read library URN", filename=fname)
+        if not file_urns:
+            return
+        # Built-in libraries the app loaded by itself (autoload) and that nothing
+        # uses: unload them too. Libraries a user loaded stay.
+        autoloaded = set(
+            StoredLibrary.objects.filter(builtin=True, autoload=True)
+            .exclude(urn__in=file_urns)
+            .values_list("urn", flat=True)
+        )
+        progress = True
+        while progress:
+            progress = False
+            for lib in LoadedLibrary.objects.filter(urn__in=autoloaded):
+                if lib.reference_count == 0:
+                    logger.info("Unloading removed autoloaded library", urn=lib.urn)
+                    lib.delete()
+                    progress = True
+        loaded_urns = set(LoadedLibrary.objects.values_list("urn", flat=True))
+        stale = StoredLibrary.objects.filter(builtin=True).exclude(
+            urn__in=file_urns | loaded_urns
+        )
+        stale_urns = list(stale.values_list("urn", flat=True))
+        if not stale_urns:
+            return
+        preset_urns = {u.replace(":library:", ":preset:", 1) for u in stale_urns}
+        used_presets = set(
+            PresetJourney.objects.values_list("preset__urn", flat=True)
+        )
+        Preset.objects.filter(urn__in=(preset_urns | set(stale_urns)) - used_presets).delete()
+        deleted, _ = stale.delete()
+        logger.info("Pruned removed built-in libraries", count=len(stale_urns))
+
