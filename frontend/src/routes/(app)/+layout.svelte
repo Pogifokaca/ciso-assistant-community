@@ -177,11 +177,13 @@
 		{@render children?.()}
 	</RespondentShell>
 {:else}
-	<div class="overflow-x-clip min-h-dvh bg-linear-to-br from-surface-200-800 to-surface-150-850">
+	<div
+		class="overflow-x-clip min-h-dvh bg-linear-to-br from-primary-50 via-surface-50 to-secondary-50 dark:from-surface-800 dark:via-surface-800 dark:to-surface-900"
+	>
 		<SideBar bind:open={sidebarOpen} {sideBarVisibleItems} />
 
 		<AppBar
-			class="sticky top-0 z-50 border-b border-surface-200-800 transition-all duration-300 bg-surface-50-950 w-auto pb-2 px-4 {classesSidebarOpen(
+			class="sticky top-0 z-50 border-b border-primary-100 dark:border-surface-800 transition-all duration-300 bg-white/90 dark:bg-surface-950 backdrop-blur w-auto pb-2 px-4 {classesSidebarOpen(
 				sidebarOpen
 			)}"
 		>

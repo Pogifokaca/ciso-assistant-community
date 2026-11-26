@@ -15,8 +15,8 @@
 	// otherwise `/campaigns?kind=internal` would never highlight.
 	let classesActive = $derived((href: string) =>
 		href === page.url.pathname || href === `${page.url.pathname}${page.url.search}`
-			? 'bg-primary-100-900 text-primary-800-200'
-			: 'hover:bg-primary-50-950 text-surface-950-50 '
+			? 'bg-primary-100 text-primary-800 font-medium dark:bg-primary-900 dark:text-primary-200'
+			: 'hover:bg-primary-50 dark:hover:bg-primary-950 text-surface-800 dark:text-surface-100 '
 	);
 </script>
 
