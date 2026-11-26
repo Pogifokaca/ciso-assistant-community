@@ -12,6 +12,88 @@ export const navData = {
 		// 	]
 		// },
 		{
+			name: 'organization',
+			items: [
+				{
+					name: 'domains',
+					fa_icon: 'fa-solid fa-sitemap',
+					href: '/folders',
+					exclude: ['BI-RL-TPR', 'BI-RL-ADE']
+				},
+				{
+					name: 'perimeters',
+					fa_icon: 'fa-solid fa-cubes',
+					href: '/perimeters'
+				},
+				{
+					name: 'users',
+					fa_icon: 'fa-solid fa-user',
+					href: '/users',
+					// Listed to who may see users' full record, change users or create them, on Global
+					// where users live (see the full-view-permissions ADR); other members reach users
+					// through pickers.
+					globalPermissions: ['view_user_full', 'change_user', 'add_user']
+				},
+				{
+					name: 'teams',
+					fa_icon: 'fa-solid fa-people-group',
+					href: '/teams'
+				},
+				{
+					name: 'userGroups',
+					fa_icon: 'fa-solid fa-users',
+					href: '/user-groups'
+				},
+				{
+					name: 'idpGroups',
+					fa_icon: 'fa-solid fa-id-badge',
+					href: '/idp-groups'
+				},
+				{
+					name: 'connectedApps',
+					fa_icon: 'fa-solid fa-plug',
+					href: '/connected-apps',
+					adminOnly: true
+				}
+			]
+		},
+		{
+			name: 'financialInstitutionsCategory',
+			items: [
+				{
+					name: 'finregOverview',
+					fa_icon: 'fa-solid fa-gauge',
+					href: '/finreg-overview',
+					permissions: ['view_financialinstitution']
+				},
+				{
+					name: 'financialInstitutionsRegister',
+					fa_icon: 'fa-solid fa-building-columns',
+					href: '/financial-institutions'
+				},
+				{
+					name: 'regulators',
+					fa_icon: 'fa-solid fa-landmark',
+					href: '/regulators'
+				},
+				{
+					name: 'regulatoryObligations',
+					fa_icon: 'fa-solid fa-scale-balanced',
+					href: '/regulatory-obligations'
+				},
+				{
+					name: 'regulatoryReports',
+					fa_icon: 'fa-solid fa-file-export',
+					href: '/regulatory-reports'
+				},
+				{
+					name: 'supervisoryFindings',
+					fa_icon: 'fa-solid fa-magnifying-glass-chart',
+					href: '/supervisory-findings'
+				}
+			]
+		},
+		{
 			name: 'overview',
 			items: [
 				{
@@ -79,88 +161,6 @@ export const navData = {
 					fa_icon: 'fa-solid fa-rocket',
 					href: '/presets',
 					permissions: ['add_loadedlibrary', 'view_presetjourney']
-				}
-			]
-		},
-		{
-			name: 'financialInstitutionsCategory',
-			items: [
-				{
-					name: 'finregOverview',
-					fa_icon: 'fa-solid fa-gauge',
-					href: '/finreg-overview',
-					permissions: ['view_financialinstitution']
-				},
-				{
-					name: 'financialInstitutionsRegister',
-					fa_icon: 'fa-solid fa-building-columns',
-					href: '/financial-institutions'
-				},
-				{
-					name: 'regulators',
-					fa_icon: 'fa-solid fa-landmark',
-					href: '/regulators'
-				},
-				{
-					name: 'regulatoryObligations',
-					fa_icon: 'fa-solid fa-scale-balanced',
-					href: '/regulatory-obligations'
-				},
-				{
-					name: 'regulatoryReports',
-					fa_icon: 'fa-solid fa-file-export',
-					href: '/regulatory-reports'
-				},
-				{
-					name: 'supervisoryFindings',
-					fa_icon: 'fa-solid fa-magnifying-glass-chart',
-					href: '/supervisory-findings'
-				}
-			]
-		},
-		{
-			name: 'organization',
-			items: [
-				{
-					name: 'domains',
-					fa_icon: 'fa-solid fa-sitemap',
-					href: '/folders',
-					exclude: ['BI-RL-TPR', 'BI-RL-ADE']
-				},
-				{
-					name: 'perimeters',
-					fa_icon: 'fa-solid fa-cubes',
-					href: '/perimeters'
-				},
-				{
-					name: 'users',
-					fa_icon: 'fa-solid fa-user',
-					href: '/users',
-					// Listed to who may see users' full record, change users or create them, on Global
-					// where users live (see the full-view-permissions ADR); other members reach users
-					// through pickers.
-					globalPermissions: ['view_user_full', 'change_user', 'add_user']
-				},
-				{
-					name: 'teams',
-					fa_icon: 'fa-solid fa-people-group',
-					href: '/teams'
-				},
-				{
-					name: 'userGroups',
-					fa_icon: 'fa-solid fa-users',
-					href: '/user-groups'
-				},
-				{
-					name: 'idpGroups',
-					fa_icon: 'fa-solid fa-id-badge',
-					href: '/idp-groups'
-				},
-				{
-					name: 'connectedApps',
-					fa_icon: 'fa-solid fa-plug',
-					href: '/connected-apps',
-					adminOnly: true
 				}
 			]
 		},
@@ -409,7 +409,6 @@ export const navData = {
 				}
 			]
 		},
-
 		{
 			name: 'compliance',
 			items: [

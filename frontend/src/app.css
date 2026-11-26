@@ -9,6 +9,13 @@
 */
 @import '../ciso-theme.css';
 @import '@skeletonlabs/skeleton-svelte';
+/* RegTech: Inter (self-hosted, includes Cyrillic) for the whole interface */
+@import '@fontsource-variable/inter';
+
+@theme {
+	--font-sans:
+		'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
 
 @source './**/*.{html,js,svelte,ts}';
 
